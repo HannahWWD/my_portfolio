@@ -1,0 +1,75 @@
+@import '../base.scss';
+
+.contact-content{
+    display:grid;
+    grid-template-columns: 1.8fr 1fr;
+    margin-bottom: 10em;
+    h2{
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+    
+}
+
+.contact-left{
+    padding-left: 10em;
+    display: flex;
+    align-items: center;
+    img{
+        width:200px;
+        animation: spin 3s linear infinite;
+        -webkit-animation: spin 3s linear infinite;
+}
+}
+
+.contact-method{
+    margin-top: 5em;
+    div{
+        margin: 0.5em 0;
+    }
+    .body-s{
+        color:$grey;
+    }
+    p{
+        padding:10px 0;
+    }
+
+    img{
+        filter:brightness(0)    ;
+        -webkit-filter:brightness(0)    ;
+}
+
+  
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  @media(max-width:$layout-breakpoint-medium){
+    .contact-content{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-left{
+        padding:2em;
+    }
+
+}
+
+@media(max-width:$layout-breakpoint-small){
+    .contact-content{
+        grid-template-columns: 1fr;
+    }
+    .contact-left{
+        padding:4em 0 0 0;
+        justify-content: center;
+    }
+
+    .contact-right{
+        margin-top: 10em;
+    }
+
+}

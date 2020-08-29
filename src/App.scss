@@ -1,0 +1,55 @@
+@import './base.scss';
+
+@mixin loaderAnimation {
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation:moveOut 1.2s #{($i - 1) * .2}s ease-in forwards;
+        -webkit-animation:moveOut 1.2s #{($i - 1) * .2}s ease-in forwards;
+    }
+}
+}
+
+.main-content{
+    background-color: #fff;
+    margin:15% 12% 2% 12%;
+}
+
+.hidden{
+    display:none;
+}
+
+
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    // right:0;
+    // bottom: 0;
+    width:100vw;
+    height:100vh;
+    z-index: 200;
+    div{
+        height:20%;
+        background-color:$secondary-color;
+        @include loaderAnimation;
+  
+    }
+    // animation: hide 0.1s 3s forwards;
+    // -webkit-animation: hide 0.1s 2s forwards;
+}
+  
+  @keyframes moveOut{
+      0%{
+          width:100%;
+      }
+      100%{
+          width:0%;
+      }
+  }
+
+
+@media(max-width:$layout-breakpoint-small){
+    .main-content{
+        margin:45% 5% 10% 5%;
+    }
+}

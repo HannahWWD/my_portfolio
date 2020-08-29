@@ -1,16 +1,36 @@
 import React from 'react';
-// import './App.css';
-import './App.scss'
-import Home from './pages/home'
 import {BrowserRouter,Route} from 'react-router-dom'
+import './App.scss'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import ResetScroll from './components/ResetScroll'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import TravelApp from './pages/TravelApp'
+
+
 
 function App() {
+
+
   return (
     <div className="App">
-    <BrowserRouter>
-      <Route exact path="/" component={Home} /> 
 
-    </BrowserRouter>
+      <BrowserRouter>
+        <ResetScroll />
+        <Navbar />
+       
+        <Route exact path="/" component={Home}/> 
+        <Route path="/about"  component={About}/> 
+        <Route path="/contact"  component={Contact}/> 
+        <Route path="/travel-app"  component={TravelApp}/> 
+      
+        <Footer />
+      
+        
+
+      </BrowserRouter>
 
     </div>
   );

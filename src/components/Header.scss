@@ -1,0 +1,32 @@
+@import '../base.scss';
+
+header{
+    display:grid;
+    grid-template-columns: auto 30%;
+    align-items: center;
+    h1{
+        display: inline;
+    }
+    span{
+        color:$grey;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding-left:0.5em;
+    }
+    margin-bottom:8%;
+}
+
+@media(max-width:$layout-breakpoint-small){
+    header{
+            h1{
+                font-size: 15vw;
+            }
+            span {
+                font-size: 10vw;
+            }
+        
+        grid-template-columns: 100%;
+       
+    }
+}

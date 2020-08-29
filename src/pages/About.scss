@@ -1,0 +1,92 @@
+@import '../base.scss';
+
+
+
+.about-container{
+    background-color: #fff;
+    position: relative;
+    background: url('../images/frame.png') no-repeat center;
+    display:grid;
+    margin:0 auto;
+    max-width: 1100px;
+    height:1100px;
+    grid-template-columns: repeat(2,40%);
+    justify-content: space-between;
+    h2{
+        text-transform: uppercase;
+
+    }
+    padding-bottom: 8em;
+    box-sizing: border-box;
+    
+}
+
+
+.about-left{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    p{
+        padding-top: 2em;
+        text-align: justify;
+        line-height: 1.8;
+    }
+    img{
+        display:none;
+    }
+    
+
+}
+
+.about-right{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img{
+        width:100%;
+    }
+
+    a{
+        color:$secondary-color;
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+@media(max-width:$layout-breakpoint-medium){
+    .about-container{
+        grid-template-columns: repeat(2,45%);
+        background-size: 75%;
+    }
+    
+}
+
+@media(max-width:$layout-breakpoint-small){
+    .about-container{
+        margin-top: 10em;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        height:auto;
+    }
+
+    .about-left{
+        justify-content: flex-start;
+        img{
+            width:100%;
+            display: block;
+            padding-bottom: 5em;
+            
+        }
+    }
+    .about-right{
+        padding-top:5em ;
+        img{
+            display:none;
+        }
+    }
+}

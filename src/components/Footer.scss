@@ -1,0 +1,64 @@
+@import '../base.scss';
+
+footer{
+    background-color:$secondary-color;
+    padding:6% 12% 4% 12%;
+    color:$primary-color;
+    display:flex;
+    justify-content: space-between;
+
+    .body-s{
+        color:$grey;      
+    }
+    
+    p{
+        padding:10px 0;
+    }
+
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+    li{
+        padding: 10px 0;
+        list-style-type: none;
+        font-size: 36px;
+        font-variant: small-caps;
+
+    }
+    
+}
+
+.footer-contact div{
+    &:nth-child(2){
+        margin: 1em 0;
+    }
+
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    img{
+        padding-right: 1em;
+        width:25px;
+    }
+
+}
+
+.credit{
+    padding-top:15%;
+    color:$grey;
+    font-size: 14px;
+
+}
+
+
+
+
+@media(max-width:$layout-breakpoint-small){
+   footer{
+       padding:15% 5% 10% 5%;
+       flex-direction: column;
+   }
+}
