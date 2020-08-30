@@ -55,12 +55,12 @@
 
 
 .one {
-    background: rgb(233, 90, 190);
+    background: $purple;
 
 }
 
 .two {
-    background: rgb(153, 139, 136);
+    background: $light-pink;
 
     // img {
     //     filter        : brightness(80%);
@@ -69,11 +69,11 @@
 }
 
 .three {
-    background: #348692;
+    background: $blue;
 }
 
 .four {
-    background: rgb(146, 58, 228);
+    background: $pink;
 
     img {
         filter        : brightness(80%);

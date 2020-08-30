@@ -1,3 +1,5 @@
+@import '../base.scss';
+
 .work-content{
     margin-top: 8em;
     h2{
@@ -5,6 +7,13 @@
         text-align: center;
 
     }
+
+    .body-s{
+        color:$grey;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
     p{
         text-align: justify;
     }
