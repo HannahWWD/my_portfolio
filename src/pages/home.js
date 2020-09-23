@@ -42,6 +42,14 @@ function Home() {
                 <div className="project-container">
                     <div className="card-row">
                         <Card
+                            image={require('../images/card2.gif')}
+                            title="InterArt"
+                            subtitle="Interactive Art Community Web App"
+                            intro="An interactive multimedia art community for designers and art lovers"
+                            backgroundColor="two"
+                            link="/interart"
+                        />
+                        <Card
                             image={require('../images/card1.gif')}
                             title="Future trip snippet"
                             subtitle="Travel Web App"
@@ -49,14 +57,7 @@ function Home() {
                             backgroundColor="one"
                             link="/travel-app"
                         />
-                        <Card
-                            image={require('../images/card2.gif')}
-                            title="Hanna's Blog"
-                            subtitle="Blogging Web App"
-                            intro="A blogging app that documents the beauty of life"
-                            backgroundColor="two"
-                            link="/travel-app"
-                        />
+                        
                     </div>
 
                     <div className="card-row">

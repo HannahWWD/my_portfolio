@@ -13,32 +13,44 @@
 .work-header-content {
     text-align: center;
     color     : $primary-color;
+p{
+    line-height: 2;
+}
+  
 
-    p {
-        padding: 1em;
+    h1{
+        padding:1.2rem 0;
     }
 
-    h1 {
-        padding-bottom: 1em;
-    }
 
     &>div {
-        display        : flex;
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+        column-gap: 4em;
         justify-content: center;
 
-        button {
+        a {
+            margin-top: 3em;
+            width:200px;
+            height:55px;
+            border-radius: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: $primary-color;
             background: none;
             border: 1px solid $primary-color;
-            margin: 0 2em;
             transition: 0.5s;
             -webkit-transition: 0.5s;
             -moz-transition: 0.5s;
             -ms-transition: 0.5s;
             -o-transition: 0.5s;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            text-decoration: none;
+            font-weight: 400;
             svg{
                 padding-right : 0.5em;
                 padding-bottom: 0.1em;

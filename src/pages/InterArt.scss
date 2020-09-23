@@ -1,0 +1,24 @@
+@import '../base.scss';
+
+
+.insight{
+    border: 1px dashed $pink;
+    padding:1em;
+}
+
+.design-requirements{
+    &>div{
+        display: flex;
+        align-items: center;
+        svg{
+            padding-right: 0.5em;
+            color:$purple;
+        }
+
+    }
+    
+}
+
+.user-flow{
+    margin-top:3em;
+}
