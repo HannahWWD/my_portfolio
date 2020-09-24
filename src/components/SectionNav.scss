@@ -1,0 +1,37 @@
+@import '../base.scss';
+
+
+.section-nav{
+    position: fixed;
+    top:50%;
+   right:60px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    a{
+        text-transform: capitalize;
+        text-decoration: none;
+        line-height: 2;
+        display:flex;
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+        svg{
+            font-size: 10px;
+            padding-right: 10px;
+        }
+       
+        color:$purple;
+        &:hover{
+            color:$secondary-color;
+        }
+    }
+}
+
+@media only screen and (max-width:1200px){
+   .section-nav{
+       display: none;
+   }
+}

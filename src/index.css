@@ -66,4 +66,6 @@ button{
     cursor: pointer ;
 }
 
-::-webkit-scrollbar{}
+.hidden{
+    display:none !important; 
+}

@@ -6,7 +6,7 @@
     padding:1em;
 }
 
-.design-requirements{
+.customized-list{
     &>div{
         display: flex;
         align-items: center;
@@ -21,4 +21,33 @@
 
 .user-flow{
     margin-top:3em;
+}
+
+.extra-margin{
+    margin: 2em 0;
+}
+
+#about{
+    a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color:$primary-color;
+        background-color: $blue;
+        border: 1px solid $blue;
+        padding:1em 2em;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        margin-bottom: 4em;
+        transition-duration: 0.2s;
+        font-weight: 400;
+        &:hover{
+            background-color: #4c62b1;
+        }
+    }
+
+    
 }
