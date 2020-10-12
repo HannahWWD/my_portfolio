@@ -10,7 +10,7 @@ import Contact from './pages/Contact'
 import TravelApp from './pages/TravelApp'
 import InterArtApp from './pages/InterArtApp';
 import Galene from './pages/Galene';
-
+import {Link} from 'react-router-dom';
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
       <BrowserRouter>
         <ResetScroll />
         <Navbar />
+        <Link to="/" className="icon-main"><span>HW</span></Link>
        
         <Route exact path="/" component={Home}/> 
         <Route path="/about"  component={About}/> 

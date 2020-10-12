@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import './TemplateStyle.scss';
 import './Galene.scss';
 import WorkHeader from '../components/WorkHeader';
@@ -6,10 +6,27 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
+import SectionNav from '../components/SectionNav';
 
 export default function Galene() {
+    const [ids, setIds] = useState([])
+    const [sectionNames,setSectionNames] = useState([])
+
+    useEffect(() => {
+        const allSection = document.querySelectorAll('section');
+        for(let section of allSection){
+            if(section.id){
+                setIds(prev=>[...prev,section.id])
+                setSectionNames(prev=>[...prev,section.dataset.sectionName])
+            }
+        }
+        
+    }, [])
+
+
     return (
         <div>
+        {ids.length ? <SectionNav ids={ids} sectionNames={sectionNames}/>:null}
           <WorkHeader
                 title="Project Galene"
                 subtitle="Mobile App UX Design"

@@ -37,7 +37,7 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body="A designer turned UX ENGINEER who creatively designs and builds products that could bring convenience and beauty for users."
+                    body="A designer turned UX Engineer & Web Developer who creatively designs and builds products that could bring convenience and beauty for users."
                 />
                 <div className="project-container">
                     <div className="card-row">
@@ -76,7 +76,7 @@ function Home() {
                             subtitle="Weather and diary web app"
                             intro="Records weather and feelings"
                             backgroundColor="three"
-                            link="https://github.com/HannahWWD/weather-journal"
+                            tempLink="https://github.com/HannahWWD/weather-journal"
                         />
                        
                     </div>
