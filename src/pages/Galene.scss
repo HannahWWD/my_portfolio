@@ -1,0 +1,43 @@
+@import '../base.scss';
+
+.research-methods{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 2em;
+    &>div{
+        p:first-child{
+            margin-bottom: 3em;
+            width:170px;
+            height:170px;
+            background-color: $pink;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            text-transform: capitalize;
+}
+        p:last-child{
+            text-align: center;
+        }
+    }
+}
+
+.three-col-galene{
+    img{
+        margin-bottom: 1em;
+    }
+    div{
+        p{
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+
+    grid-auto-rows: 150px;
+}

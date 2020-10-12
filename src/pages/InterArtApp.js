@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import './TravelApp.scss'
+import './TemplateStyle.scss'
 import './InterArt.scss'
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import WorkHeader from '../components/WorkHeader';
@@ -7,6 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import SectionNav from '../components/SectionNav';
 import {HashLink} from 'react-router-hash-link';
+import HorizontalStepper from '../components/HorizontalStepper'
 
 
 
@@ -46,7 +47,7 @@ function InterArtApp() {
                 <section id="about" data-section-name="beginning">
                     <p className="body-s">React / Sass / Node / Express / Heroku / GitHub / AJAX</p>
                     <h2>An interactive multimedia art community for designers and art lovers</h2>
-                    <HashLink smooth to="#code">Jump to the Technical Section</HashLink>
+                    <HashLink smooth to="#code">Jump to Development Section</HashLink>
                    
                 </section>
 
@@ -55,6 +56,9 @@ function InterArtApp() {
                 <section id="problem" data-section-name="the problem">
                     <h3>Lightbulb moment (Problem) </h3>
                     <p>I used to work as an interactive installation designer. This emerging field is trendy, which attracts more and more designers transiting into this novel realm. Nonetheless, its community is still immature. Unlike architectural designers, who could find trending architecture projects on Archdaily, or UX designers, who could get inspirations from Dribbble/Behance, <b>interactive art designers do not have a centralized place to find, collect or share related projects.</b>This issue inspires me to create a website for all interactive art designers and art lovers.</p>
+                    <h4>Timeline and Process</h4>
+                    <HorizontalStepper />
+
                 </section>
                 <section id="background" data-section-name="background intro">
                     <h3>What is interactive multimedia art?</h3>
@@ -76,7 +80,7 @@ function InterArtApp() {
                 <section id="define" data-section-name="define requirement">
                     <h3>Define Design Requirements</h3>
                     <p>An overarching design question for this project is:</p>
-                    <p className="insight" style={{ fontSize: "18px", margin: "2em 0" }}><b>How to build a website where <span>interactive art designers and art lovers</span> could <span>conveniently get inspirations</span> and <span>interact with the community?</span></b></p>
+                    <p className="insight highlight"><b>How to build a website where <span>interactive art designers and art lovers</span> could <span>conveniently get inspirations</span> and <span>interact with the community?</span></b></p>
                     <p>To better understand the design question, I  conducted 4 user interviews focusing on these research questions:</p>
                     <br />
                     <ol>
@@ -86,14 +90,13 @@ function InterArtApp() {
                         <li>How do designers and art lovers interact with a community?(pattern)</li>
                     </ol>
                         <h4>1) Synthesising insights through Affinity Diagramming</h4>
-                    </section>
                         <a href="https://miro.com/app/board/o9J_kmQK9CE=/" rel="noopener noreferrer" target="_blank"><img src={require('../images/analysis-thumb.jpg')} alt="affinity diagram"></img></a>
-                    <section>
                         <h4>2) Generate Persona through insights</h4>
+                        <a href={require('../images/persona.png')} rel="noopener noreferrer" target="_blank"><img src={require('../images/persona.png')} alt="persona"></img></a>
                     </section>
                   
               
-                <img src={require('../images/persona.png')} alt="persona"></img>
+                
                 <section>
                     <h4>3) Main takeaways</h4>
                     <div>
@@ -138,9 +141,13 @@ function InterArtApp() {
                     <div><DonutLargeIcon fontSize="large"/>prioritize reading experience</div>
                     <div><DonutLargeIcon fontSize="large"/>UI should be user-friendly for making photo posts in mobile view</div>
                     </div>
-                </section>
+                    <h4>User Task Flow</h4>
+                    <a href={require('../images/task_flow_small.jpg')} target="_blank" rel="noopener noreferrer"><img src={require('../images/task_flow_small.jpg')} alt="task flow"></img></a>
+              
+                    <h4>Wireframing</h4>
+                    <a href={require('../images/taskflow_prev.png')} target="_blank" rel="noopener noreferrer"><img src={require('../images/taskflow_prev.png')} alt="user flow prev" className="user-flow"></img></a></section>
                 
-                <a href="https://drive.google.com/file/d/1-zNqfiI-lnA1L7-YRgomdYBPRRkrwn-9/view?usp=sharing" target="_blank" rel="noopener noreferrer"><img src={require('../images/flow-1.png')} alt="user flow" className="user-flow"></img></a>
+               
                
                <section id="test" data-section-name="test and iteration">
                    <h3>(Mini) Usability Test and Iteration</h3>
@@ -179,12 +186,27 @@ function InterArtApp() {
                     <p className="insight"><b><span>Solution: </span></b>Add an avatar icon to the navigation bar in mobile view.</p>
             </section>
                 <img className="extra-margin" src={require('../images/ut4.png')} alt="usability change 4"></img>
+            <section>
+                <h4>Iterated user task flow</h4>
+            </section>
+                <img src={require('../images/taskflow_after.png')} alt="task flow after"></img>
+                <img src={require('../images/taskflow_after-m.png')} alt="task flow after mobile"></img>
+
+            <section>
+                <h4>Final App Hierarchy</h4>
+                <a href={require('../images/webapp-userflow_small.jpg')} target="_blank" rel="noopener noreferrer"><img src={require('../images/webapp-userflow_small.jpg')} alt="webapp user flow"></img></a>
+            </section>
 
             
             <section id="high-fid" data-section-name="high fidelity prototype">
                 <h3>High Fidelity Prototype in Figma</h3>
                 <p>Before dived into live demo development, I made a high fidelity prototype in Figma as a blue print for the website.</p>
+                
             </section>
+            
+            
+            
+
             <figure>
                 <img className="extra-margin" src={require('../images/all_desktop.jpg')} alt="desktop view"></img>
                 <figcaption>Desktop View</figcaption>
@@ -210,6 +232,16 @@ function InterArtApp() {
                 <div><DonutLargeIcon fontSize="large"/>AJAX</div>
                 </div>
                 <br/>
+                <p>Implemented Features:</p>
+                <div className="customized-list">
+                <div><DonutLargeIcon fontSize="large"/>Continuously obtain new feed through infinite scrolling</div>
+                <div><DonutLargeIcon fontSize="large"/>Get access to all posts and collections which are dynamically generated through mock APIs on the server</div>
+                <div><DonutLargeIcon fontSize="large"/>Save posts and find them in archives</div>
+                <div><DonutLargeIcon fontSize="large"/>Make new posts</div>
+                <div><DonutLargeIcon fontSize="large"/>Delete posts</div>
+                </div>
+
+                <br/>
                 <h3>Live Demo and GitHub</h3>
                 <p>View the live web app demo and github:</p>
                 <div className="live-demo-container">
@@ -217,7 +249,7 @@ function InterArtApp() {
                 <br/>
                 <p><b><span>It might take 5~10 seconds to load the demo. Please Do NOT close the browser while loading.</span></b></p>
                 
-                <a href="https://interart-app.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="live-demo-btn"><LiveTvIcon />Live Demo</a>
+                <a href="https://interart-app.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="live-demo-btn"><LiveTvIcon />Live App</a>
                 
                 <a href="https://github.com/HannahWWD/interart_with_server" rel="noopener noreferrer" target="_blank" className="live-demo-btn btn-contour"><GitHubIcon />GitHub</a>
                 </div>

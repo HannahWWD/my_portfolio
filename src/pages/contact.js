@@ -1,33 +1,33 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './Contact.scss'
 import Header from '../components/Header'
 
 function Contact() {
 
-    document.body.style.overflow="hidden";
+    //document.body.style.overflow="hidden";
     
 
-    const [isAnimationDone, setIsAnimationDone] = useState(false)
+    // const [isAnimationDone, setIsAnimationDone] = useState(false)
 
-    function loadedContent(){
-        setTimeout(()=>{
-            setIsAnimationDone(true)},2000)
-        }
+    // function loadedContent(){
+    //     setTimeout(()=>{
+    //         setIsAnimationDone(true)},2000)
+    //     }
     
-    if(isAnimationDone){
-        document.body.style.overflowY="scroll";
-    }
+    // if(isAnimationDone){
+    //     document.body.style.overflowY="scroll";
+    // }
 
     return (
-        <div onLoad={loadedContent}>
-
+        <div>
+{/* 
             <div className={isAnimationDone? "hidden":"overlay"}>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </div> */}
 
 
             <div className="main-content">

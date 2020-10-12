@@ -13,6 +13,7 @@ function Footer() {
                 <ul>
                     <li><Link to="/">Work</Link></li>
                     <li><Link to="/about">About</Link></li>
+                    <li><a href={require('../images/resume_Wu_Hannah_1.pdf')} rel="noopener noreferrer" target="_blank">Resume</a></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>
@@ -31,8 +32,9 @@ function Footer() {
                     </div>
                 </div>
                 <div className="credit">
-                    <p>© Designed and developed by Hannah Wu</p>
-                    <p>See <Link to="/">Credits and Attributions</Link></p>
+                    <p>Designed and developed with React</p>
+                    <p>© Hannah Wu 2020</p>
+                    {/* <p>See <Link to="/">Credits and Attributions</Link></p> */}
                 </div>
 
 

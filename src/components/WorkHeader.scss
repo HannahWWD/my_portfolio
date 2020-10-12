@@ -24,13 +24,14 @@ p{
 
 
     &>div {
-        display: grid;
-        grid-template-columns: repeat(2,200px);
-        column-gap: 4em;
+        // display: grid;
+        // grid-auto-columns:;
+        // column-gap: 4em;
+        display:flex;
         justify-content: center;
 
         a,button {
-            margin-top: 3em;
+            margin: 3em 1.5em 0 1.5em;
             width:200px;
             height:55px;
             border-radius: 50px;

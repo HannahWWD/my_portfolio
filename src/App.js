@@ -9,6 +9,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import TravelApp from './pages/TravelApp'
 import InterArtApp from './pages/InterArtApp';
+import Galene from './pages/Galene';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/contact"  component={Contact}/> 
         <Route path="/travel-app"  component={TravelApp}/> 
         <Route path="/interart"  component={InterArtApp}/> 
+        <Route path="/galene"  component={Galene}/> 
       
         <Footer />
       

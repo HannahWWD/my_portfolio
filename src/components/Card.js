@@ -6,7 +6,7 @@ function Card(props) {
 
     return (
             <div className="card-wrapper">
-                <Link to={props.link}>
+            {props.link ? <Link to={props.link}>
                     <div className={`card-container ${props.backgroundColor}`}>
                         <img src={props.image} alt={props.alt}></img>
                         <div className="card-info">
@@ -16,7 +16,19 @@ function Card(props) {
                             <button type="button">View Project</button>
                         </div>
                     </div>
-                </Link>
+                </Link>:
+                <a href={props.tempLink} rel="noopener noreferrer" target="_blank">
+                <div className={`card-container ${props.backgroundColor}`}>
+                        <img src={props.image} alt={props.alt}></img>
+                        <div className="card-info">
+                            <p>{props.subtitle}</p>
+                            <h3>{props.title}</h3>
+                            <h4>{props.intro}</h4>
+                            <button type="button">View Project</button>
+                        </div>
+                    </div>
+                </a>}
+                
             </div>
 
     )

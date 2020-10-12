@@ -5,11 +5,10 @@
 .about-container{
     background-color: #fff;
     position: relative;
-    background: url('../images/frame.png') no-repeat center;
+    //background: url('../images/frame.png') no-repeat center;
     display:grid;
-    margin:0 auto;
-    max-width: 1100px;
-    height:1100px;
+    // margin:0 auto;
+    //max-width: 1100px;
     grid-template-columns: repeat(2,40%);
     justify-content: space-between;
     h2{
@@ -23,9 +22,22 @@
 
 
 .about-left{
+   
+
+    img{
+        width:100%;
+    }
+
+   
+    
+
+}
+
+.about-right{
+
     display:flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     p{
         padding-top: 2em;
         text-align: justify;
@@ -34,22 +46,14 @@
     img{
         display:none;
     }
-    
-
-}
-
-.about-right{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    img{
-        width:100%;
-    }
 
     a{
+        padding-top: 2em;
         color:$secondary-color;
         text-decoration: none;
+        &:hover{
+            text-decoration:underline;
+        }
     }
 
 }

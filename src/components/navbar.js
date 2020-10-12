@@ -19,12 +19,15 @@ function Navbar() {
 
     return (
         <nav onClick={handleNavClicked} className={isExpanded? "nav-wrapper":"nav-wrapper nav-shrink"}>
+            
             <ul className="tab">
                 <li><Link to="/">Work</Link></li>
                 <li><Link to="/about">About</Link></li>
+                <li><a href={require('../images/resume_Wu_Hannah_1.pdf')} rel="noopener noreferrer" target="_blank">Resume</a></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
             <MenuIcon className="expand-icon"/>
+            
         </nav>)
 
 

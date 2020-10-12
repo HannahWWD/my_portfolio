@@ -4,7 +4,7 @@
 .nav-wrapper {
     z-index: 100;
     position: fixed;
-    left:60px;
+    right:60px;
     top:60px;
     color:$primary-color;
     width: 50vw;
@@ -33,7 +33,7 @@
     ul{
         width:80%;
         display:grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
         align-items: center;
 
         li{
@@ -43,7 +43,6 @@
             font-size: 18px;
     }
 
-   
         
     }
 
@@ -51,6 +50,7 @@
         display: flex;
         align-self: center;
         font-size: 25px;
+      
     }
 
 
@@ -59,8 +59,14 @@
 @media(max-width:$layout-breakpoint-medium) {
     .nav-wrapper{
         width:90vw;
-        left:5%;
+        right:5%;
         top:5%;
+       ul{
+           margin-right: 10px;
+           li{
+               font-size: 16px;
+           }
+       }
     }
 
 }

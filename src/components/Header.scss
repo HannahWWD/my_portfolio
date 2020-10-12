@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 
 header{
-    display:grid;
-    grid-template-columns: auto 30%;
+    // display:grid;
+    // grid-template-columns: auto 30%;
     align-items: center;
     h1{
         display: inline;
@@ -17,6 +17,11 @@ header{
         padding-left:0.5em;
     }
     margin-bottom:8%;
+    p{
+        font-size: 18px;
+        padding-top: 1em;
+        
+    }
 }
 
 @media(max-width:$layout-breakpoint-small){
@@ -29,6 +34,7 @@ header{
             }
         
         grid-template-columns: 100%;
+        row-gap:2em;
        
     }
 }
