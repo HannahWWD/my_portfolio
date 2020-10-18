@@ -42,7 +42,7 @@ function Home() {
                 <div className="project-container">
                     <div className="card-row">
                         <Card
-                            image={require('../images/n_cover_1.png')}
+                            image={require('../images/n_cover_1.jpg')}
                             title="InterArt"
                             subtitle="Interactive Art Community Web App"
                             intro="An interactive multimedia art community for designers and art lovers"
@@ -50,7 +50,7 @@ function Home() {
                             link="/interart"
                         />
                          <Card
-                            image={require('../images/n_cover_2.png')}
+                            image={require('../images/n_cover_2.jpg')}
                             title="Project Galene"
                             subtitle="Microplastic Research App and Sampler"
                             intro="A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research"
