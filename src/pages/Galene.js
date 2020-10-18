@@ -29,7 +29,7 @@ export default function Galene() {
         {ids.length ? <SectionNav ids={ids} sectionNames={sectionNames}/>:null}
           <WorkHeader
                 title="Project Galene"
-                subtitle="Mobile App UX Design"
+                subtitle="Microplastic Research App and Sampler"
                 role="Role: UX Researcher & UX Designer / Duration: 9 weeks / with Jazz Ang, Kelly Lin, Weixi Zhang"
                 figma="https://www.figma.com/proto/PY1KJdZU8YKCgFpyJjmvie/Project-Galene?node-id=8%3A2&viewport=358%2C226%2C0.053081218153238297&scaling=scale-down"
             />

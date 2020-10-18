@@ -99,7 +99,7 @@ section{
         align-items: center;
         justify-content: center;
         img{
-            width:150px;
+            width:120px;
         }
         figcaption{
             padding-top: 1em;
@@ -179,7 +179,7 @@ iframe{
    margin: 2em 0
 }
 
-@media only screen and (max-width:1200px){
+@media (max-width:$layout-breakpoint-medium){
     section{
         margin:0 5%;
     }
@@ -189,7 +189,10 @@ iframe{
 
 }
 
-@media only screen and (max-width:768px){
+@media (max-width:$layout-breakpoint-small){
+    .fig-with-caption{
+        flex-direction: column;
+    }
     .three-cols{
         grid-template-columns: 1fr;
     }

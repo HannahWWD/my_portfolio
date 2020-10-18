@@ -42,17 +42,17 @@ function Home() {
                 <div className="project-container">
                     <div className="card-row">
                         <Card
-                            image={require('../images/card2.gif')}
+                            image={require('../images/n_cover_1.png')}
                             title="InterArt"
                             subtitle="Interactive Art Community Web App"
                             intro="An interactive multimedia art community for designers and art lovers"
-                            backgroundColor="two"
+                            backgroundColor="four"
                             link="/interart"
                         />
                          <Card
-                            image={require('../images/card4.jpg')}
+                            image={require('../images/n_cover_2.png')}
                             title="Project Galene"
-                            subtitle="Mobile App UX Design"
+                            subtitle="Microplastic Research App and Sampler"
                             intro="A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research"
                             backgroundColor="one"
                             link="/galene"
@@ -67,7 +67,7 @@ function Home() {
                             title="trip snippet"
                             subtitle="Travel Web App"
                             intro="A travel app to keep all you need for your future trip"
-                            backgroundColor="four"
+                            backgroundColor="two"
                             tempLink="https://github.com/HannahWWD/travel_app"
                         />
                         <Card

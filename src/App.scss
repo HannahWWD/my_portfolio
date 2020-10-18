@@ -23,6 +23,7 @@ a.icon-main{
     font-family: 'Raleway', sans-serif;
     color:$secondary-color;
     text-decoration: none;
+    z-index: 99;
 }
 
 .overlay{
@@ -58,4 +59,11 @@ a.icon-main{
     .main-content{
         margin:45% 5% 10% 5%;
     }
+
+    a.icon-main{
+        left:5%;
+        top:5%;
+
+    }
+    
 }

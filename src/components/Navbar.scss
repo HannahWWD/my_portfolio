@@ -33,7 +33,7 @@
     ul{
         width:80%;
         display:grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
         align-items: center;
 
         li{
@@ -41,6 +41,7 @@
             list-style-type: none;
             font-variant: small-caps;
             font-size: 18px;
+           
     }
 
         
