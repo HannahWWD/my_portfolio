@@ -226,7 +226,7 @@ function InterArtApp() {
                 <br/>
                 <div className="customized-list">
                 <div><DonutLargeIcon fontSize="large"/>React -- JSX, ES6</div>
-                <div><DonutLargeIcon fontSize="large"/>SASS</div>
+                <div><DonutLargeIcon fontSize="large"/>SASS, BootStap</div>
                 <div><DonutLargeIcon fontSize="large"/>Node.JS and Express -- backend server</div>
                 <div><DonutLargeIcon fontSize="large"/>Heroku with GitHub -- deployment</div>
                 <div><DonutLargeIcon fontSize="large"/>AJAX</div>

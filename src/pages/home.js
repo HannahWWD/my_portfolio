@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.scss'
 import Header from '../components/Header'
 import Card from '../components/Card'
+import { useState } from 'react'
 
 
 
@@ -21,6 +22,11 @@ function Home() {
     //     document.body.style.overflowY="scroll";
     // }
 
+    const [activeTab,setActiveTab] = useState('all')
+
+    
+
+
     return (
         <div>
 
@@ -39,6 +45,11 @@ function Home() {
                     subtitle="Wu"
                     body="A designer turned UX Engineer & Web Developer who creatively designs and builds products that could bring convenience and beauty for users."
                 />
+                <div className="filters">
+                    <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
+                    <button onClick={()=>{setActiveTab('dev')}} className={activeTab === 'dev'? 'active':null}>Development</button>
+                    <button onClick={()=>{setActiveTab('ux')}} className={activeTab === 'ux' ? 'active':null}>UX Design</button>
+                    </div>
                 <div className="project-container">
                     <div className="card-row">
                         <Card
@@ -48,6 +59,7 @@ function Home() {
                             intro="An interactive multimedia art community for designers and art lovers"
                             backgroundColor="four"
                             link="/interart"
+                            visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
                         />
                          <Card
                             image={require('../images/n_cover_2.jpg')}
@@ -56,6 +68,7 @@ function Home() {
                             intro="A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research"
                             backgroundColor="one"
                             link="/galene"
+                            visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                         />
                         
                         
@@ -69,6 +82,7 @@ function Home() {
                             intro="A travel app to keep all you need for your future trip"
                             backgroundColor="two"
                             tempLink="https://github.com/HannahWWD/travel_app"
+                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                         />
                         <Card
                             image={require('../images/card3.png')}
@@ -77,6 +91,7 @@ function Home() {
                             intro="Records weather and feelings"
                             backgroundColor="three"
                             tempLink="https://github.com/HannahWWD/weather-journal"
+                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                         />
                        
                     </div>

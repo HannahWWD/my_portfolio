@@ -5,7 +5,8 @@ import './Card.scss'
 function Card(props) {
 
     return (
-            <div className="card-wrapper">
+
+            <div className={props.visibility ? "card-wrapper":"card-wrapper black-out"}>
             {props.link ? <Link to={props.link}>
                     <div className={`card-container ${props.backgroundColor}`}>
                         <img src={props.image} alt={props.alt}></img>

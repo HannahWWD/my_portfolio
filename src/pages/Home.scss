@@ -8,9 +8,34 @@
     display:flex;
     // max-width: 1300px;
     // align-items: stretch;
-    background-color: red;
+    // background-color: $pink;
     position: relative;
 }
+
+.filters{
+    button{
+        background: none;
+        transition-duration: 0.5s;
+        border: 1px solid $blue;
+        margin: 0 2em 2em 0;
+        width:auto;
+        height:auto;
+        padding:0.5em 2em;
+        color:$blue;
+        &:hover{
+            background: $blue;
+            color:$primary-color;
+        }
+       
+    }
+    .active{
+        background: $blue;
+        color:$primary-color;
+
+    }
+
+}
+
 
 @media(max-width:$layout-breakpoint-medium){
     .card-row{
