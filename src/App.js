@@ -11,6 +11,7 @@ import TravelApp from './pages/TravelApp'
 import InterArtApp from './pages/InterArtApp';
 import Galene from './pages/Galene';
 import {Link} from 'react-router-dom';
+import Weather from './pages/Weather';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/travel-app"  component={TravelApp}/> 
         <Route path="/interart"  component={InterArtApp}/> 
         <Route path="/galene"  component={Galene}/> 
+        <Route path="/weather-widget"  component={Weather}/> 
       
         <Footer />
       

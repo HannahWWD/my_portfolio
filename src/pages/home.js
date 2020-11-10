@@ -43,7 +43,7 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body="A designer turned UX Engineer & Web Developer who creatively designs and builds products that could bring convenience and beauty for users."
+                    body="A designer turned UX ENGINEER & WEB DEVELOPER trying to bring convenience and beauty for users."
                 />
                 <div className="filters">
                     <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
@@ -60,6 +60,7 @@ function Home() {
                             backgroundColor="four"
                             link="/interart"
                             visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
+                            tag={["UX research","UX design","web development"]}
                         />
                          <Card
                             image={require('../images/n_cover_2.jpg')}
@@ -69,12 +70,23 @@ function Home() {
                             backgroundColor="one"
                             link="/galene"
                             visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
+                            tag={["UX research","UX design"]}
                         />
                         
                         
                     </div>
 
                     <div className="card-row">
+                    <Card
+                            image={require('../images/cover3.jpg')}
+                            title="Weather Widget"
+                            subtitle="Weather Web App"
+                            intro="Know current and future weather in your city at a glance "
+                            backgroundColor="three"
+                            link="/weather-widget"
+                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
+                            tag={["web development","UI design"]}
+                        />
                     <Card
                             image={require('../images/card1.gif')}
                             title="trip snippet"
@@ -83,16 +95,9 @@ function Home() {
                             backgroundColor="two"
                             tempLink="https://github.com/HannahWWD/travel_app"
                             visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
+                            tag={["web development","UI design"]}
                         />
-                        <Card
-                            image={require('../images/card3.png')}
-                            title="Weather Journal"
-                            subtitle="Weather and diary web app"
-                            intro="Records weather and feelings"
-                            backgroundColor="three"
-                            tempLink="https://github.com/HannahWWD/weather-journal"
-                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
-                        />
+                      
                        
                     </div>
                 </div>

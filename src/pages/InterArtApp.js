@@ -27,8 +27,6 @@ function InterArtApp() {
         
     }, [])
 
-    console.log(sectionNames)
-
 
 
     return (
@@ -44,7 +42,7 @@ function InterArtApp() {
             />
 
             <article className="main-content work-content">
-                <section id="about" data-section-name="beginning">
+                <section id="about" data-section-name="beginning" className="about">
                     <p className="body-s">React / Sass / Node / Express / Heroku / GitHub / AJAX</p>
                     <h2>An interactive multimedia art community for designers and art lovers</h2>
                     <HashLink smooth to="#code">Jump to Development Section</HashLink>

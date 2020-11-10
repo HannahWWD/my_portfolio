@@ -3,6 +3,7 @@ import {Link } from 'react-router-dom'
 import './Card.scss'
 
 function Card(props) {
+    const tags = props.tag.join(", ")
 
     return (
 
@@ -15,7 +16,9 @@ function Card(props) {
                             <h3>{props.title}</h3>
                             <h4>{props.intro}</h4>
                             <button type="button">View Project</button>
+                            <p className="card-tag">keyword: {tags} </p>
                         </div>
+                      
                     </div>
                 </Link>:
                 <a href={props.tempLink} rel="noopener noreferrer" target="_blank">
@@ -26,6 +29,7 @@ function Card(props) {
                             <h3>{props.title}</h3>
                             <h4>{props.intro}</h4>
                             <button type="button">View Project</button>
+                            <p className="card-tag">keyword: {tags} </p>
                         </div>
                     </div>
                 </a>}
