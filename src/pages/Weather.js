@@ -15,7 +15,7 @@ function Weather() {
         subtitle="Weather Web App"
         role="Role: Product Designer & Front End Engineer / Duration: 1 week"
         github="https://github.com/HannahWWD/weather-widget"
-        demo="https://clever-minsky-d826e4.netlify.app/"
+        demo="https://weather-widget-demo.netlify.app/"
       />
 
       <article className="main-content work-content">
@@ -92,7 +92,7 @@ function Weather() {
           <p>Checkout the live web app demo and github repository:</p>
           <div className="live-demo-container">
             <a
-              href="https://clever-minsky-d826e4.netlify.app/"
+              href="https://weather-widget-demo.netlify.app/"
               rel="noopener noreferrer"
               target="_blank"
               className="live-demo-btn"
