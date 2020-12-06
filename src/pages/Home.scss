@@ -22,10 +22,12 @@
         height:auto;
         padding:0.5em 2em;
         color:$blue;
+        outline: none;
         &:hover{
             background: $blue;
             color:$primary-color;
         }
+        
        
     }
     .active{

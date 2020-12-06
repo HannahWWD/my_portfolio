@@ -12,6 +12,7 @@ import InterArtApp from './pages/InterArtApp';
 import Galene from './pages/Galene';
 import {Link} from 'react-router-dom';
 import Weather from './pages/Weather';
+import Pet from './pages/Pet';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <BrowserRouter>
         <ResetScroll />
         <Navbar />
-        <Link to="/" className="icon-main"><span>HW</span></Link>
+        <Link to="/" className="icon-main"><img src={require('../src/images/icon.svg')} alt="favicon"/></Link>
        
         <Route exact path="/" component={Home}/> 
         <Route path="/about"  component={About}/> 
@@ -32,6 +33,8 @@ function App() {
         <Route path="/interart"  component={InterArtApp}/> 
         <Route path="/galene"  component={Galene}/> 
         <Route path="/weather-widget"  component={Weather}/> 
+        <Route path="/pet"  component={Pet}/> 
+        
       
         <Footer />
       

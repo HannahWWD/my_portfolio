@@ -43,15 +43,27 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body="A designer turned UX ENGINEER & WEB DEVELOPER trying to bring convenience and beauty for users."
+                    body={["I design and code beautiful things to support meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`]}
                 />
                 <div className="filters">
                     <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
-                    <button onClick={()=>{setActiveTab('dev')}} className={activeTab === 'dev'? 'active':null}>Development</button>
                     <button onClick={()=>{setActiveTab('ux')}} className={activeTab === 'ux' ? 'active':null}>UX Design</button>
+                    <button onClick={()=>{setActiveTab('dev')}} className={activeTab === 'dev'? 'active':null}>Development</button>
                     </div>
                 <div className="project-container">
                     <div className="card-row">
+                        <Card
+                            image={require('../images/mockup_pet.jpg')}
+                            title="Fluffy"
+                            subtitle="Animal Adoption Website"
+                            intro="Connecting adopters with their ideal pets"
+                            backgroundColor="two"
+                            link="/Pet"
+                            visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
+                            tag={["UX research","UX design","web development"]}
+                            />
+
+
                         <Card
                             image={require('../images/n_cover_1.jpg')}
                             title="InterArt"
@@ -62,7 +74,13 @@ function Home() {
                             visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
                             tag={["UX research","UX design","web development"]}
                         />
-                         <Card
+                         
+                        
+                        
+                    </div>
+
+                    <div className="card-row">
+                    <Card
                             image={require('../images/n_cover_2.jpg')}
                             title="Project Galene"
                             subtitle="Microplastic Research App and Sampler"
@@ -72,11 +90,6 @@ function Home() {
                             visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                             tag={["UX research","UX design"]}
                         />
-                        
-                        
-                    </div>
-
-                    <div className="card-row">
                     <Card
                             image={require('../images/cover3.jpg')}
                             title="Weather Widget"
@@ -87,7 +100,7 @@ function Home() {
                             visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                             tag={["web development","UI design"]}
                         />
-                    <Card
+                    {/* <Card
                             image={require('../images/card1.gif')}
                             title="trip snippet"
                             subtitle="Travel Web App"
@@ -96,7 +109,7 @@ function Home() {
                             tempLink="https://github.com/HannahWWD/travel_app"
                             visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                             tag={["web development","UI design"]}
-                        />
+                        /> */}
                       
                        
                     </div>

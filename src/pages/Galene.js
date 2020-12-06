@@ -252,7 +252,7 @@ export default function Galene() {
                     <p className="highlight"><b>On Boarding Issue</b></p>
                         <p>Some divers are unfamiliar with citizen science and microplastics. More explanations are needed before participating in a project</p>
                         <br/>
-                        <p className="insight"><b><span>Solution: </span></b>Provide citizen scieence and microplastic information at the on-boarding pages. Build background knowledge before exploring projects</p>
+                        <p className="insight"><b><span>Solution: </span></b>Provide citizen science and microplastic information at the on-boarding pages. Build background knowledge before exploring projects</p>
                     </section>
                     <a href={require('../images/galene/ON-BOARDING1.jpg')}  rel="noopener noreferrer" target="_blank"><img className="extra-margin" src={require('../images/galene/ON-BOARDING1.jpg')} alt="on boarding iteration"></img></a>
 

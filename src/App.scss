@@ -18,12 +18,10 @@ a.icon-main{
     position: fixed;
     left:60px;
     top:60px;
-    font-size: 30px;
-    font-weight: 400;
-    font-family: 'Raleway', sans-serif;
-    color:$secondary-color;
-    text-decoration: none;
     z-index: 99;
+    img{
+        width:40px;
+    }
 }
 
 .overlay{

@@ -1,5 +1,4 @@
 @import '../base.scss';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
 
 header{
     // display:grid;
@@ -9,7 +8,7 @@ header{
         display: inline;
     }
     span{
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Quicksand', sans-serif;
         color:$grey;
         font-size: 40px;
         text-transform: uppercase;
@@ -18,7 +17,7 @@ header{
     }
     margin-bottom:8%;
     p{
-        font-size: 18px;
+        font-size: 17px;
         padding-top: 1em;
         
     }

@@ -33,6 +33,12 @@
 section{
     max-width: 780px;
     margin:0 auto;
+    a{
+        
+        font-weight: 600;
+        font-size: inherit;
+        color: $blue;
+    }
     p{
         line-height: 2;
         font-stretch: ultra-expanded;
@@ -204,6 +210,27 @@ iframe{
 
     
 }
+
+.zoom-image{
+    margin:2em 0;
+    width:100%;
+    outline:none;
+}
+
+
+.videos{
+    margin:2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+video{
+    width:100%;
+    display:flex;
+    justify-self:center
+}
+
 
 @media (max-width:$layout-breakpoint-medium){
     section{
