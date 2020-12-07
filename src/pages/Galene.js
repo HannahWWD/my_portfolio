@@ -7,6 +7,9 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import SectionNav from '../components/SectionNav';
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import Solution from '../components/Solution';
 
 export default function Galene() {
     const [ids, setIds] = useState([])
@@ -39,27 +42,17 @@ export default function Galene() {
                     <h2>A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research</h2>
                 </section>
                 <img src={require('../images/galene/Outcome-Overview.jpg')} alt="overview"></img>
-                <section id="overview" data-section-name="TL;DR">
-                <h3>TL;DR</h3>
-                <h4>The Problem</h4>
+                <section id="galene-overview" data-section-name="Overview">
+                <h3>Overview</h3>
+                
                 <p>Microplastics—tiny pieces less than five millimeters in size—have largely been studied on the ocean surface because of its accessibility. However, many scientists and researchers have discovered that microplastics are also presented at deep-sea columns. To further expand the microplastic research, it is necessary to analyze sediment samples from deep-sea locations worldwide. However, this type of sediment sample is largely inaccessible by land-based scientists.<br/>
                 <b>To help solve the problem of inaccessible and insufficient sediment samples for micro-plastic pollution research,</b> we sought to the citizens who possess the necessary skills, interests, and capacity to collect sediment samples - scuba divers.</p>
+                <p>To start, we asked:</p>
+                <p className="design-question"><b>"How can we engage and empower scuba divers to collect deep-sea samples and contribute to microplastic pollution research?"</b></p>
 
-                <h4>Skateholders</h4>
-                <div className="fig-with-caption">
-                    <figure>
-                    <img src={require('../images/galene/noun_scuba_diver.png')} alt="scubar diver"></img>
-                    <figcaption>Scuba Diver</figcaption>
-                </figure>
-                <figure>
-                    <img src={require('../images/galene/noun_Scientist.png')} alt="microplastic researcher"></img>
-                    <figcaption>Microplastic Researcher</figcaption>
-                </figure></div>
-
-                <h4>Design Question</h4>
-                <p className="insight highlight"><b>How can we engage and empower <span>scuba divers</span> to collect <span>deep-sea samples</span> and contribute to <span>microplastic</span> pollution research? </b></p>
-
-                <h4>Key Findings</h4>
+                <p>Below is a strategy overview for our design solution:</p>
+                <br/>
+                <br/>
                 <div className="fig-with-caption">
                     <figure>
                         <img src={require('../images/galene/Bottle.jpg')} alt="bottle"></img>
@@ -125,32 +118,15 @@ export default function Galene() {
 
                 </section>
                 <section id="exploratory" data-section-name="Exploratory">
-
-                    <h4>Initial Problem Discover</h4>
+                    <h3>Exploratory</h3>
+                    
                     <p>Rather than biodegrading, plastic just gets smaller into microplastics. A 2014 study suggests that there are an estimated 51 trillion particles in the ocean, perhaps even more. It is impossible to clean, and the size of microplastics makes it almost impossible to separate them from water, and hence, marine animals often mistake them as food. Now, 100,000 marine creatures die due to microplastic pollution every year. <b>To study the sources, distribution, and effects of micro-plastic pollution, scientists and researchers require a large quantity of reliable offshore samples - largely inaccessible for land-based scientists.</b></p>
                     <h4>Initial Design Question</h4>
-                    <p className="insight highlight"><b>How can we engage and empower <span>people</span>to collect <span>water samples</span> and contribute to microplastic research?</b></p>
+                    <p className="design-question"><b>"How can we engage and empower people to collect water samples and contribute to microplastic research?"</b></p>
                     <h4>Research Method</h4>
-                    <div className="research-methods">
-                        <div>
-                            <p><b>131<br></br>surveys</b></p>
-                            {/* <p>We got 131 responses in total from UW student diving club, Seattle Scuba, Silent World Diving System etc. <br/>The survey aims to find out typical diver’s experience, criteria for choosing scuba gear, and willingness to contribute to any scientific research in the future.</p> */}
-                        </div>
-                        <div>
-                            <p><b>1<br></br>expert interview</b></p>
-                            {/* <p>We conducted an interview with Dr. Julie Masura in the Geoscience department at UW Tacoma. Her fieldwork has expanded to determining the concentrations of microplastics in the waters of the Pacific Northwest. <br/>We found out current research needs and problems during the interview.</p> */}
-                        </div>
-                        <div>
-                            <p><b>1<br></br>contextual inquiry</b></p>
-                            {/* <p>We did the contextual inquiry at Diver Institute of Technology with have the chance to interview Mike Hemion, who is an dive supervisor that trains professional divers.<br/>The observation helped us to understand contextual activities and conditions while diving.</p> */}
-                        </div>
-                        <div>
-                            <p><b>8<br></br>user interviews</b></p>
-                            {/* <p>We interviewed 8 scuba divers from diverse backgrounds. <br/> We learned about their motivations for environmental programs, potential concerns about the sampling device and the sample collection process in detail.</p> */}
-                        </div>
-
-                    </div>
-                <h4>Research Findings</h4>
+                    <img src={require('../images/galene/research_method.png')} alt="research method"></img>
+                        
+                <h3>Research takeaways</h3>
                 <div className="three-cols three-col-galene">
                 <div>
                         <img src={require('../images/galene/noun_Water_1808325-01.png')} alt="deep sea"></img>
@@ -180,8 +156,11 @@ export default function Galene() {
 
                 <h4>Persona</h4>
                 <p>With our insights generated from our user research, we created their respective personas to represent the motivation and frustrations of our primary stakeholders.</p>
-                <a href={require('../images/galene/Personas-1.jpg')}  rel="noopener noreferrer" target="_blank"><img src={require('../images/galene/Personas-1.jpg')} alt="persona"></img></a>
-                <h4>iterated Design Question</h4>
+                <Zoom>
+                <img src={require('../images/galene/Personas-1.jpg')} alt="persona" className="zoom-image"></img>
+                </Zoom>
+                
+                <h4>Design Question Iteration</h4>
                 <img src={require('../images/galene/revised-question.jpg')} alt="iterated questions"></img>
 
                 <h4>Design Requirements</h4>
@@ -232,62 +211,79 @@ export default function Galene() {
                     <img src={require('../images/galene/process-of-1st-prototype.jpg')} alt="process of 1st prototype"></img>
                     <h4>Mid-Fidelity Hardware Prototype</h4>
                     <img src={require('../images/galene/result-of-1st-prototype.jpg')} alt="result of 1st prototype"></img>
-                    <h4>User-Flow and Wireframing for Galene App</h4>
+                    <h4>User-Flow and Wireframes for Galene App</h4>
                     <p>To facilitate the process of sample collection, the Galene App is connected to the Galene devices to find projects nearby, record sample collection and data, and submit them</p>
-                    <a href={require('../images/galene/On-Boarding.jpg')}  rel="noopener noreferrer" target="_blank"><img src={require('../images/galene/On-Boarding.jpg')} alt="on boarding"></img></a>
-                    <a href={require('../images/galene/Find-Project.jpg')}  rel="noopener noreferrer" target="_blank"><img src={require('../images/galene/Find-Project.jpg')} alt="find project"></img></a>
-                    <a href={require('../images/galene/Submit-Sample.jpg')}  rel="noopener noreferrer" target="_blank"><img src={require('../images/galene/Submit-Sample.jpg')} alt="submit sample"></img></a>
-                    <h3>Evaluative</h3>
-                    <h4>Usability Test</h4>
-                    <a href={require('../images/galene/Usablity-Test.jpg')}  rel="noopener noreferrer" target="_blank"><img src={require('../images/galene/Usablity-Test.jpg')} alt="affinity diagramming"></img></a>
-                    <img src={require('../images/galene/Usablity-Test-highlight.jpg')} alt="result"></img>
-                    <h4>Iterated hardware prototype</h4>
-                    <img src={require('../images/galene/Frame-4.jpg')} alt="affinity diagramming"></img>
-
-                    <h4>Iterated Mobile Application</h4>
+                    <Zoom>
+                        <img src={require('../images/galene/On-Boarding.jpg')} alt="on boarding" className="zoom-image"></img>
+                    </Zoom>
+                    <Zoom>
+                        <img src={require('../images/galene/Submit-Sample.jpg')} alt="submit sample" className="zoom-image"></img>
+                    </Zoom>
+                    <Zoom>
+                        <img src={require('../images/galene/Submit-Sample.jpg')} alt="submit sample" className="zoom-image"></img>
+                    </Zoom>
                     </section>
 
-                    <section>
+
+                    <section id="evaluative" data-section-name="Evaluative">
+                    
+                    <h3>Evaluative</h3>
+                    <h4>Key issues</h4>
+                    <Zoom>
+                    <img className="zoom-image" src={require('../images/galene/Usablity-Test.jpg')} alt="affinity diagramming"></img>
+                    </Zoom>
+                    
+                    <img src={require('../images/galene/Usablity-Test-highlight.jpg')} alt="result"></img>
+                    <h4>Iterate hardware prototype</h4>
+                    <img src={require('../images/galene/Frame-4.jpg')} alt="iterated hardware prototype"></img>
+
+                    <h4>Iterate Mobile Application</h4>
 
                     <p className="highlight"><b>On Boarding Issue</b></p>
                         <p>Some divers are unfamiliar with citizen science and microplastics. More explanations are needed before participating in a project</p>
-                        <br/>
-                        <p className="insight"><b><span>Solution: </span></b>Provide citizen science and microplastic information at the on-boarding pages. Build background knowledge before exploring projects</p>
-                    </section>
-                    <a href={require('../images/galene/ON-BOARDING1.jpg')}  rel="noopener noreferrer" target="_blank"><img className="extra-margin" src={require('../images/galene/ON-BOARDING1.jpg')} alt="on boarding iteration"></img></a>
+                
+                        <Solution explanation="Provide citizen science and microplastic information at the on-boarding pages. Build background knowledge before exploring projects"></Solution>
+                        <Zoom>
+                        <img className="zoom-image" src={require('../images/galene/ON-BOARDING1.jpg')} alt="on boarding iteration"></img>
+                    </Zoom>
+                    <Zoom>
+                    <img className="zoom-image" src={require('../images/galene/ON-BOARDING1.jpg')} alt="on boarding iteration"></img>
+                    </Zoom>
 
-                    <section>
 
                         <p className="highlight"><b>Find Projects and Project Overview Issues </b></p>
                             <p>1. Need a clearer instruction of how to collect the sample.<br/>
                             2. Since the data tracking function is only kept in the capsule, users need to pair a capsule to the phone each time they join a project (*Previously the data trackers locate both in the s-biner and capsule, once the s-biner is connected, the data could be automatically sync to the phone even though the capsule is replaced or not*)</p>
-                            <br/>
-                            <p className="insight"><b><span>Solution: </span></b>1. Add “how to collect sample” instruction.<br/>
-                            2. Set up and connect Galene Capsule after divers confirm to join the project.</p>
-                        </section>
-                        <a href={require('../images/galene/Find-Project-after.jpg')}  rel="noopener noreferrer" target="_blank"><img className="extra-margin" src={require('../images/galene/Find-Project-after.jpg')} alt="find project iteration"></img></a>
-
-                        <section>
+                            <Solution 
+                            explanation="Add “how to collect sample” instruction."
+                            explanation2="Set up and connect Galene Capsule after divers confirm to join the project"></Solution>
+                            <Zoom>
+                    <img className="zoom-image" src={require('../images/galene/Find-Project-after.jpg')} alt="find project iteration" ></img>
+                    </Zoom>
 
                         <p className="highlight"><b>Upload Data and Sample Issues</b></p>
                             <p>1. Participants need more instructions of the sample submission process.<br/>
                             2. Participants would like to edit the dive log before linking aquatic data to the project.<br/>
                             3. Participants prefer to reuse the sample collector instead of one-time use.</p>
                             <br/>
-                            <p className="insight"><b><span>Solution: </span></b>1.Add Galene Capsule sample collection tutorial and detailed submission process<br/>
-                            2. Add the “edit log” function before sample submission.<br/>
-                            3. Add a sample bottle in the last step of sample submission process. Divers can pour the water sample in the sample bottle and reuse the Galene Capsule.<br/>
-                            4. Remove “take a photo” function since each sample bottle has a serial number for tracking.</p>
+                            <Solution
+                            explanation="Add Galene Capsule sample collection tutorial and detailed submission process"
+                            explanation2="Add the “edit log” function before sample submission."
+                            explanation3="Add a sample bottle in the last step of sample submission process. Divers can pour the water sample in the sample bottle and reuse the Galene Capsule."
+                            explanation4="Remove “take a photo” function since each sample bottle has a serial number for tracking."></Solution>
+                            <Zoom>
+                            <img className="zoom-image" src={require('../images/galene/Submit-Sample1.jpg')} alt="submit sample iteration"></img>
+                            </Zoom>
                         </section>
-                        <a href={require('../images/galene/Submit-Sample1.jpg')}  rel="noopener noreferrer" target="_blank"><img className="extra-margin" src={require('../images/galene/Submit-Sample1.jpg')} alt="submit sample iteration"></img></a>
+                        
 
-                        <section>
+                        <section id="galene-final-design" data-section-name="final-design">
+                        <h3>Final Design</h3>
                             <h4>High Fidelity Hardware Prototype</h4>
                             <p>The Galene capsule is mainly used to collect the sample and captured related data leveraging the embedded tracker. The S-biner, which connects both to the capsule and the BCD, is one of the two associates that comes with the main capsule. Another associate is the retractable cable, which additionally attached to the S-biner and the capsule, prevents the capsule from accidentally flowing away while detaching from the carabiner.</p>
-                        </section>
-                        <img className="extra-margin" src={require('../images/galene/iterated-prototype.jpg')} alt="high fidelity hardware prototype"></img>
-
-                        <section>
+                            <Zoom>
+                            <img className="zoom-image" src={require('../images/galene/iterated-prototype.jpg')} alt="high fidelity hardware prototype"></img>
+                            </Zoom>
                             <h4>High Fidelity Mobile Application</h4>
                             <p>Working closely with the Galene Capsule, the Galene App includes three main features: 1)discover/participate in a project; 2)data upload; 3) sample submission.</p>
                             <p className="highlight"><span><b>Try out our prototype</b></span> below:</p>
@@ -300,12 +296,14 @@ export default function Galene() {
                             <p>
                                 Expert interview & usability tests have been the most helpful in figuring out the requirements from the researchers and what citizen scuba divers’ desire in order to go out and collect samples. For an area this niche, subject matter experts and talking to people firsthand gave us more insights over hours of secondary research.
                             </p>
+                            <br/>
                             <p><b>What was surprising?</b></p>
                             <p>
                             1. For a skill-based hobby like scuba diving, we need to consider the proficiency and capacity. Novice scuba divers might not feel comfortable or confident to operate other devices underwater, especially when they are still learning to control their buoyancy.<br/>
                             2. Our interpretation of what is seemingly easy, is completely different in the natural environment context (i.e. 40 feet down underwater with bulky scuba gears). Divers wear different gears and gloves that would affect how they interact with the device.
 ​
                             </p>
+                            <br/>
                             <p><b>Given more time…</b></p>
                             <p>
                             1. Talking to more researchers will provide us a better understanding of the different research needs. Further, establishing validity to our solution. By doing so, Galene kit could be use for different kinds of research as well.<br/>2.Testing the prototype under constraints (e.g. underwater). Doing so, allow us to simulate similar environment that scuba divers would have. Putting ourselves in their condition, their shoes.

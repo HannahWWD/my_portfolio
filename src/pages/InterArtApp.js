@@ -8,6 +8,10 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 import SectionNav from '../components/SectionNav';
 import {HashLink} from 'react-router-hash-link';
 import HorizontalStepper from '../components/HorizontalStepper'
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import Insight from '../components/Insight';
+import Solution from '../components/Solution';
 
 
 
@@ -45,18 +49,24 @@ function InterArtApp() {
                 <section id="about" data-section-name="beginning" className="about">
                     <p className="body-s">React / Sass / Node / Express / Heroku / GitHub / AJAX</p>
                     <h2>An interactive multimedia art community for designers and art lovers</h2>
-                    <HashLink smooth to="#code">Jump to Development Section</HashLink>
                    
                 </section>
 
                 <div><img src={require('../images/interart-1.jpg')} alt="desktop and mobile view"></img></div>
                 <br /><br />
-                <section id="problem" data-section-name="the problem">
-                    <h3>Lightbulb moment (Problem) </h3>
-                    <p>I used to work as an interactive installation designer. This emerging field is trendy, which attracts more and more designers transiting into this novel realm. Nonetheless, its community is still immature. Unlike architectural designers, who could find trending architecture projects on Archdaily, or UX designers, who could get inspirations from Dribbble/Behance, <b>interactive art designers do not have a centralized place to find, collect or share related projects.</b>This issue inspires me to create a website for all interactive art designers and art lovers.</p>
-                    <h4>Timeline and Process</h4>
-                    <HorizontalStepper />
+                <section id="problem" data-section-name="the problem" className="about">
+                    <h3>Overview</h3>
+                    <p>I used to work as a UX designer at a interactive art startup. This emerging field is trendy, which attracts more and more designers transiting into this novel realm. Nonetheless, its community is still immature. Unlike architectural designers, who could find trending architecture projects on ArchDaily, or UX designers, who could get inspirations from Dribbble/Behance, <b>interactive art designers do not have a centralized place to find, collect or share related projects.</b> This issue inspires me to create a website for all interactive art designers and art lovers.</p>
+                    <br/>
+                    <p>An overarching design question for this project is:</p>
+                    <p className="design-question">"How to build a website where interactive art designers and art lovers could conveniently get inspirations and interact with the community?"</p>
+                    <HashLink smooth to="#art-demo">View Prototype</HashLink>
 
+                </section>
+
+                <section id="art-process" data-section-name="process">
+                <h3>process</h3>
+                <HorizontalStepper />
                 </section>
                 <section id="background" data-section-name="background intro">
                     <h3>What is interactive multimedia art?</h3>
@@ -75,11 +85,9 @@ function InterArtApp() {
                         </div>
                     </div>
                 </section>
-                <section id="define" data-section-name="define requirement">
-                    <h3>Define Design Requirements</h3>
-                    <p>An overarching design question for this project is:</p>
-                    <p className="insight highlight"><b>How to build a website where <span>interactive art designers and art lovers</span> could <span>conveniently get inspirations</span> and <span>interact with the community?</span></b></p>
-                    <p>To better understand the design question, I  conducted 4 user interviews focusing on these research questions:</p>
+                <section id="define" data-section-name="research">
+                    <h3>Research</h3>
+                    <p>To better understand the design question, I conducted 4 user interviews focusing on these research questions:</p>
                     <br />
                     <ol>
                         <li>When will designers and art lovers visit a similar website? (scenarios)</li>
@@ -87,40 +95,41 @@ function InterArtApp() {
                         <li>How would they look for projects, and what kinds of information will designers and art lovers pay attention to? (pattern)</li>
                         <li>How do designers and art lovers interact with a community?(pattern)</li>
                     </ol>
-                        <h4>1) Synthesising insights through Affinity Diagramming</h4>
+                        <h4>Synthesizing with Affinity Diagramming</h4>
                         <a href="https://miro.com/app/board/o9J_kmQK9CE=/" rel="noopener noreferrer" target="_blank"><img src={require('../images/analysis-thumb.jpg')} alt="affinity diagram"></img></a>
-                        <h4>2) Generate Persona through insights</h4>
-                        <a href={require('../images/persona.png')} rel="noopener noreferrer" target="_blank"><img src={require('../images/persona.png')} alt="persona"></img></a>
-                    </section>
+                        <h4>Persona</h4>
+                        <Zoom><img src={require('../images/persona.png')} alt="persona" className="zoom-image"></img></Zoom>
+                       
+                    <h3>Research takeaways</h3>
                   
-              
-                
-                <section>
-                    <h4>3) Main takeaways</h4>
-                    <div>
+                    <div className="insights-container">
                     <p><b>Observation 1 : Desktop website for project references, and mobile website for daily digests.</b></p>
-                    <p className="note-s">4/4 participants indicated that they would visit a website via computers when they were looking for references for a project. When they were looking for daily digests, they will check out  a website via mobile phones</p>
+                    <p>4/4 participants indicated that they would visit a website via computers when they were looking for references for a project. When they were looking for daily digests, they will check out  a website via mobile phones</p>
                     <br/>
-                    <p className="insight"><b><span>Insight:</span></b> Make the website responsive, which desktop view and mobile view should have different emphasis. Desktop view should prioritize project searching and mobile view should prioritize the article reading experience</p>
+                    <Insight explanation="Make the website responsive, which desktop view and mobile view should have different emphasis. Desktop view should prioritize project searching and mobile view should prioritize the article reading experience"></Insight>
+                    </div>
 
-                    <br/>
+                    <div className="insights-container">
                     <p><b>Observation 2: Photos are the most important information for project searching.</b></p>
                     <p className="note-s">4/4 participants mentioned that they paid most attention to what a project looked like </p>
                     <br/>
-                    <p className="insight"><b><span>Insight:</span></b> Allow flexible image height to best showcase a project</p>
-
-                    <br/>
-                    <p><b>Observation 3: Participants often search for projects through categories. ( designer/ materials/topic tags)</b></p>
-                    <p className="note-s">4/4 participants mentioned that they paid most attention to what a project looked like </p>
-                    <br/>
-                    <p className="insight"><b><span>Insight:</span></b> 2/4 participants mentioned that they would look at the category menu if they need references for a specific type of project </p>
-
-                    <br/>
-                    <p><b>Observation 4: Participants usually share posts through mobile phone</b></p>
-                    <br/>
-                    <p className="insight"><b><span>Insight:</span></b> UI should be user-friendly for making photo posts in mobile view, in order to encourage participants to interact and contribute to the community </p>
+                    <Insight explanation="Allow flexible image height to best showcase a project"></Insight>
                     </div>
 
+                    <div className="insights-container">
+                    <p><b>Observation 3: Participants often search for projects through categories. (designer/materials/topics)</b></p>
+                    <p>2/4 participants mentioned that they would look at the category menu if they need references for a specific type of project</p>
+                    <br/>
+                    <Insight explanation="make categories easy to find"></Insight>
+                    </div>
+
+                    <div className="insights-container">
+                    <p><b>Observation 4: Participants usually share posts through mobile phone</b></p>
+                    <p>1/4 participant mentioned that mobile phone is most commonly used to make posts and share articles</p>
+                    <br/>
+                    <Insight explanation="UI should be user-friendly for making photo posts in mobile view, in order to encourage participants to interact and contribute to the community "></Insight>
+                    </div>
+                 
                     
 
                 </section>
@@ -139,65 +148,72 @@ function InterArtApp() {
                     <div><DonutLargeIcon fontSize="large"/>prioritize reading experience</div>
                     <div><DonutLargeIcon fontSize="large"/>UI should be user-friendly for making photo posts in mobile view</div>
                     </div>
+
+                </section>
+                <section id="art-design" data-section-name="design">
+                    <h3>Design</h3>
                     <h4>User Task Flow</h4>
                     <a href={require('../images/task_flow_small.jpg')} target="_blank" rel="noopener noreferrer"><img src={require('../images/task_flow_small.jpg')} alt="task flow"></img></a>
               
                     <h4>Wireframing</h4>
-                    <a href={require('../images/taskflow_prev.png')} target="_blank" rel="noopener noreferrer"><img src={require('../images/taskflow_prev.png')} alt="user flow prev" className="user-flow"></img></a></section>
+                    <a href={require('../images/taskflow_prev.png')} target="_blank" rel="noopener noreferrer"><img src={require('../images/taskflow_prev.png')} alt="user flow prev" className="user-flow"></img></a>
+                    </section>
                 
                
                
-               <section id="test" data-section-name="test and iteration">
-                   <h3>(Mini) Usability Test and Iteration</h3>
-                   <p>I conducted informal, rapid usability tests with 2 potential users. Four main usability issues and their solutions as follows: </p>
-                  
-                   <p><b>Issue 1: Participants didn’t realize that he could comment / like / share posts</b></p>
-                    <p className="note-s">Lacking proper indicators for comment/like/share functionalities made participants considered this website as a project searching website instead of a community(2/2 participants).</p>
+               <section id="test" data-section-name="evaluation">
+                   <h3>Evaluation</h3>
+                   <p>I conducted informal, rapid usability tests with 2 potential users. Four main usability issues and their solutions as follows: </p><br/>
+                  <h4>Key Issues</h4>
+                   <p className="highlight"><b>Issue 1: Participants didn’t realize that he could comment / like / share posts</b></p>
+                    <p>Lacking proper indicators for comment/like/share functionalities made participants considered this website as a project searching website instead of a community(2/2 participants).</p>
                     <br/>
-                    <p className="insight"><b><span>Solution: </span></b>On the home page, use ‘like,’ ‘comment,’ ‘share’ icon as hints to acknowledge first-time users that this website a community instead of a static project searching website. </p>
+                    <Solution explanation="On the home page, use ‘like,’ ‘comment,’ ‘share’ icon as hints to acknowledge first-time users that this website a community instead of a static project searching website."></Solution>
                    
                    <br/>
                </section>
-                <img className="extra-margin" src={require('../images/ut1.png')} alt="usability change 1"></img>
+               <img className="extra-margin" src={require('../images/ut1.png')} alt="usability change 1"></img>
+                
 
                 <section>
 
-                <p><b>Issue 2: One Participant searched for collections in the search bar</b></p>
-                    <p className="note-s">A participant used the search bar to search for ‘design one’s project collection. The search result only showed scattered posts related to ‘designer one,’ instead of a well-organized collection.(1/2 participants)</p>
+                <p className="highlight"><b>Issue 2: One Participant searched for collections in the search bar</b></p>
+                    <p>A participant used the search bar to search for ‘design one’s project collection. The search result only showed scattered posts related to ‘designer one,’ instead of a well-organized collection.(1/2 participants)</p>
                     <br/>
-                    <p className="insight"><b><span>Solution: </span></b>Make the category menu easier to find in the home page. Also display collection entry when certain terms are detected in the search bar.</p>
+                    <Solution explanation="Make the category menu easier to find in the home page. Also display collection entry when certain terms are detected in the search bar."></Solution>
+                   
                 </section>
                 <img className="extra-margin" src={require('../images/ut2.png')} alt="usability change 2"></img>
 
             <section>
-                <p><b>Issue 3: One Participant couldn’t find the “my archives” tab</b></p>
-                    <p className="note-s">The “my archives” tab could only be accessed after clicking the avatar. When a participant was asked to find the posts he saved, he tried to find it from the main menu, and the “my archived” option was not there.(1/2 participants)</p>
+                <p className="highlight"><b>Issue 3: One Participant couldn’t find the “my archives” tab</b></p>
+                    <p>The “my archives” tab could only be accessed after clicking the avatar. When a participant was asked to find the posts he saved, he tried to find it from the main menu, and the “my archived” option was not there.(1/2 participants)</p>
                     <br/>
-                    <p className="insight"><b><span>Solution: </span></b>Allow multiple ways to get access to “my archives”.</p>
+                    <Solution explanation="Allow multiple ways to get access to “my archives."></Solution>
+                 
             </section>
                 <img className="extra-margin" src={require('../images/ut3.png')} alt="usability change 3"></img>
 
                 <section>
-                <p><b>Issue 4: One participant spent some time to find his profile in the mobile view</b></p>
-                    <p className="note-s">A lack of consistency in the navbar confused the participant. He tried to get access to his profile through the avatar but couldn't find the avatar icon on the mobile view's navbar. Although this task was successfully completed, the participant spent a while to locate his profile within the hamburger menu(1/2 participants)</p>
+                <p className="highlight"><b>Issue 4: One participant spent some time to find his profile in the mobile view</b></p>
+                    <p>A lack of consistency in the navbar confused the participant. He tried to get access to his profile through the avatar but couldn't find the avatar icon on the mobile view's navbar. Although this task was successfully completed, the participant spent a while to locate his profile within the hamburger menu(1/2 participants)</p>
                     <br/>
-                    <p className="insight"><b><span>Solution: </span></b>Add an avatar icon to the navigation bar in mobile view.</p>
+                    <Solution explanation="Add an avatar icon to the navigation bar in mobile view."></Solution>
+                 
             </section>
                 <img className="extra-margin" src={require('../images/ut4.png')} alt="usability change 4"></img>
+
             <section>
                 <h4>Iterated user task flow</h4>
+                <Zoom><img src={require('../images/webapp-userflow_small.jpg')} alt="webapp user flow" className="zoom-image"></img></Zoom>
             </section>
+           
                 <img src={require('../images/taskflow_after.png')} alt="task flow after"></img>
                 <img src={require('../images/taskflow_after-m.png')} alt="task flow after mobile"></img>
 
-            <section>
-                <h4>Final App Hierarchy</h4>
-                <a href={require('../images/webapp-userflow_small.jpg')} target="_blank" rel="noopener noreferrer"><img src={require('../images/webapp-userflow_small.jpg')} alt="webapp user flow"></img></a>
-            </section>
-
             
             <section id="high-fid" data-section-name="high fidelity prototype">
-                <h3>High Fidelity Prototype in Figma</h3>
+                <h3>Final design</h3>
                 <p>Before dived into live demo development, I made a high fidelity prototype in Figma as a blue print for the website.</p>
                 
             </section>
@@ -214,12 +230,10 @@ function InterArtApp() {
                 <figcaption>Mobile View</figcaption>
             </figure>
 
-            <section id="code" data-section-name="code it up and deploy">
-                <h3>Coding It Up and Deploy</h3>
+            <section id="code" data-section-name="code it up">
+                <h3>Coding It Up</h3>
                 <p>I coded up the web app after the high fidelity was done. It took me about 2 weeks to implement its functionalities, and it was great fun to really made the web app operational. I started with using React to build the front end interfaces, and then established a server with Node.js and Express to host user data. I developed an API myself to faked the posts feeds that could dynamically update the client interfaces.</p>
-            </section>
-            <section id="technical" data-section-name="technical sheet">
-                <h3>Technical Sheet</h3>
+                <h4>Technical Sheet</h4>
                 <p>Code technologies that I used for this project:</p>
                 <br/>
                 <div className="customized-list">
@@ -240,7 +254,9 @@ function InterArtApp() {
                 </div>
 
                 <br/>
-                <h3>Live Demo and GitHub</h3>
+                </section>
+                <section id="art-demo" data-section-name="live demo">
+                <h3>Live Demo</h3>
                 <p>View the live web app demo and github:</p>
                 <div className="live-demo-container">
                 <p>The Heroku Dyno, which powers the app, sleeps after 30 mins of inactivity in free plan and needs time to re-power.</p>
@@ -255,9 +271,9 @@ function InterArtApp() {
             <section id="reflection" data-section-name="reflection">
 
                 <h3>Reflection</h3>
-                <p>It was a long journey --- from UX research to UX design, and from UX design to deploy the web app. I appreciate this challenging experience of implementing everything as a one-man-army. It is hard, but I've learned a lot.</p>
+                <p>It was a long journey --- from UX research to UX design, and from UX design to deploy the web app. I appreciate this challenging experience of implementing everything as a one-man-army. It is hard, but I've learned a lot.</p><br/>
                 <p><b>what was surprising</b></p>
-                <p>Developing a live prototype is extremely helpful for discovering design problems. Even though I had made a high fidelity prototype in Figma, I still found several neglected details during the development of the live version. For example, I didn't realize that the search bar would eventually disappear in the viewport during the vertical scrolling. To fix this issue, I have to add a fixed search bar on the navbar. </p>
+                <p>Developing a live prototype is extremely helpful for discovering design problems. Even though I had made a high fidelity prototype in Figma, I still found several neglected details during the development of the live version. For example, I didn't realize that the search bar would eventually disappear in the viewport during the vertical scrolling. To fix this issue, I have to add a fixed search bar on the navbar. </p><br/>
                 <p><b>Giving more time</b></p>
                 <p>1. Talk to more users and gain comprehensive insights for UX design</p>
                 <p>2. Revise the user interface design and add more details functions</p>

@@ -1,6 +1,7 @@
 @import '../base.scss';
 
 .card-wrapper {
+   
     width: 100%;
 
     a {
@@ -34,8 +35,12 @@
     padding : 0 1em;
     position: absolute;
     top     : 1em;
+    h3{
+        font-size: 18px;
+    }
 
     p {
+        font-size: 14px;
         padding-bottom: 1em;
     }
 
@@ -84,8 +89,13 @@
 }
 
 .black-out{
-    filter: brightness(20%);
-    -webkit-filter: brightness(20%);
+    img{
+        display:none;
+    }
+    background: #fff;
+    // filter: brightness(20%);
+    // -webkit-filter: brightness(20%);
+
 }
 
 
@@ -106,6 +116,7 @@
             }
 
             h4 {
+                font-size: 17px;
                 display: block;
             }
 
@@ -126,8 +137,18 @@
     }
 
     .card-info {
+       
         top     : 4em;
         left    : 2em;
+        h3{
+            font-size: 25px;
+        }
+    
+        p {
+            font-size: 17px;
+            padding-bottom: 1em;
+        }
+       
     }
     
 
@@ -138,6 +159,9 @@
         }
         &:hover{
             width: 50%;
+            button{
+                display:none;
+            }
 
         }
     }

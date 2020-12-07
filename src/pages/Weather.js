@@ -5,7 +5,7 @@ import WorkHeader from "../components/WorkHeader";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
-import { HashLink } from "react-router-hash-link";
+
 
 function Weather() {
   return (
@@ -22,21 +22,19 @@ function Weather() {
         <section className="about">
           <p className="body-s">Typescript / Webpack / AJAX / REST Api </p>
           <h2>Know current and future weather in your city at a glance</h2>
-          <HashLink smooth to="#weather-code">
-            Jump to Development Section
-          </HashLink>
         </section>
 
      
 
         <div className="videos">
-          <video autoPlay loop>
+          <video autoPlay loop muted playsInline>
             <source src={require("../images/weather/demo_3.mov")}></source>
             Your browser does not support HTML video.
           </video>
         </div>
 
         <section>
+        <h3>Overview</h3>
         <p>
             The weather widget is a one-week personal project to get my hands
             dirty on TypeScript features such as type checking, decorators and
@@ -88,7 +86,7 @@ function Weather() {
           </div>
 
           <br />
-          <h3>Live Demo and GitHub</h3>
+          <h3>Live Demo</h3>
           <p>Checkout the live web app demo and github repository:</p>
           <div className="live-demo-container">
             <a

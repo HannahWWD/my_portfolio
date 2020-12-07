@@ -2,5 +2,21 @@
 
 .research-methods-pet{
     grid-template-columns: repeat(3,1fr);
+    background: none;
 
+}
+
+.challenge{
+    margin:6em 0;
+    img{
+        margin:6em 0;
+    }
+}
+
+.pet-videos{
+    video{
+        margin:4em 0;
+
+    }
+   
 }

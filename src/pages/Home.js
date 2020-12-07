@@ -43,7 +43,7 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body={["I design and code beautiful things to support meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`]}
+                    body={["I design and code creative things to support meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`,`${String.fromCodePoint("0x1F596")} Proudly built this portfolio in React`]}
                 />
                 <div className="filters">
                     <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
@@ -51,7 +51,7 @@ function Home() {
                     <button onClick={()=>{setActiveTab('dev')}} className={activeTab === 'dev'? 'active':null}>Development</button>
                     </div>
                 <div className="project-container">
-                    <div className="card-row">
+                    <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
                         <Card
                             image={require('../images/mockup_pet.jpg')}
                             title="Fluffy"
@@ -59,37 +59,60 @@ function Home() {
                             intro="Connecting adopters with their ideal pets"
                             backgroundColor="two"
                             link="/Pet"
-                            visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
+                            // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
                             tag={["UX research","UX design","web development"]}
                             />
 
-
                         <Card
-                            image={require('../images/n_cover_1.jpg')}
-                            title="InterArt"
-                            subtitle="Interactive Art Community Web App"
-                            intro="An interactive multimedia art community for designers and art lovers"
-                            backgroundColor="four"
-                            link="/interart"
-                            visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
-                            tag={["UX research","UX design","web development"]}
-                        />
-                         
-                        
-                        
-                    </div>
-
-                    <div className="card-row">
-                    <Card
                             image={require('../images/n_cover_2.jpg')}
                             title="Project Galene"
                             subtitle="Microplastic Research App and Sampler"
                             intro="A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research"
                             backgroundColor="one"
                             link="/galene"
-                            visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
+                            // visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                             tag={["UX research","UX design"]}
+                        />                        
+                    </div>
+
+                    {/* don't know how to have the animation as well as have a single item in a row */}
+
+                    <div className={activeTab === 'ux' ? "card-row":"hidden"}>
+                    <Card
+                            image={require('../images/n_cover_1.jpg')}
+                            title="InterArt"
+                            subtitle="Interactive Art Community Web App"
+                            intro="An interactive multimedia art community for designers and art lovers"
+                            backgroundColor="four"
+                            link="/interart"
+                            //visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
+                            tag={["UX research","UX design","web development"]}
                         />
+                        <Card
+                            image={require('../images/n_cover_1.jpg')}
+                            title="InterArt"
+                            subtitle="Interactive Art Community Web App"
+                            intro="An interactive multimedia art community for designers and art lovers"
+                            
+                            visibility="placeholder"
+                            tag={["UX research","UX design","web development"]}
+                        />
+
+                    </div>
+
+                    <div className={activeTab === 'all' || activeTab === 'dev' ? "card-row":"hidden"}>
+                    <Card
+                            image={require('../images/n_cover_1.jpg')}
+                            title="InterArt"
+                            subtitle="Interactive Art Community Web App"
+                            intro="An interactive multimedia art community for designers and art lovers"
+                            backgroundColor="four"
+                            link="/interart"
+                            //visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
+                            tag={["UX research","UX design","web development"]}
+                        />
+                         
+                    
                     <Card
                             image={require('../images/cover3.jpg')}
                             title="Weather Widget"
@@ -97,7 +120,7 @@ function Home() {
                             intro="Know current and future weather in your city at a glance "
                             backgroundColor="three"
                             link="/weather-widget"
-                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
+                            //visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                             tag={["web development","UI design"]}
                         />
                     {/* <Card
