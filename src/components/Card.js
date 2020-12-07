@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
 import './Card.scss'
+import ProgressiveImage from 'react-progressive-image'
 
 function Card(props) {
     // const tags = props.tag.join(", ")
@@ -10,7 +11,9 @@ function Card(props) {
             <div className= {props.visibility !== "placeholder"? "card-wrapper":"card-wrapper black-out"}>
             {props.link ? <Link to={props.link}>
                     <div className={`card-container ${props.backgroundColor}`}>
-                        <img src={props.image} alt={props.alt}></img>
+                    <ProgressiveImage src={props.image} placeholder={props.placeholderImg}>
+                        {src => <img className="progressive" src={src} alt={props.alt} />}
+                    </ProgressiveImage>
                         <div className="card-info">
                             <p>{props.subtitle}</p>
                             <h3>{props.title}</h3>

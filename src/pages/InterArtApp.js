@@ -12,6 +12,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Insight from '../components/Insight';
 import Solution from '../components/Solution';
+import ProgressiveImage from 'react-progressive-image'
 
 
 
@@ -52,7 +53,11 @@ function InterArtApp() {
                    
                 </section>
 
-                <div><img src={require('../images/interart-1.jpg')} alt="desktop and mobile view"></img></div>
+                <ProgressiveImage src={require('../images/interart-1.jpg')} placeholder={require('../images/interart-1-placeholder.jpg')}>
+                        {src => <img className="progressive" src={src} alt="desktop and mobile view" />}
+                </ProgressiveImage>
+
+                
                 <br /><br />
                 <section id="problem" data-section-name="the problem" className="about">
                     <h3>Overview</h3>

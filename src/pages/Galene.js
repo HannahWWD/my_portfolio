@@ -10,6 +10,7 @@ import SectionNav from '../components/SectionNav';
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Solution from '../components/Solution';
+import ProgressiveImage from 'react-progressive-image'
 
 export default function Galene() {
     const [ids, setIds] = useState([])
@@ -41,7 +42,9 @@ export default function Galene() {
                     <p className="body-s">Figma / Rhino / Cura / Adobe Creative Cloud</p>
                     <h2>A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research</h2>
                 </section>
-                <img src={require('../images/galene/Outcome-Overview.jpg')} alt="overview"></img>
+                <ProgressiveImage src={require('../images/galene/Outcome-Overview.jpg')} placeholder={require('../images/galene/Outcome-Overview-placeholder.jpg')}>
+                        {src => <img className="progressive" src={src} alt="overview" />}
+                </ProgressiveImage>
                 <section id="galene-overview" data-section-name="Overview">
                 <h3>Overview</h3>
                 

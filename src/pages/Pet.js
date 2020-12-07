@@ -9,6 +9,8 @@ import WorkHeader from "../components/WorkHeader";
 import SectionNav from "../components/SectionNav";
 import Solution from "../components/Solution";
 import {Link} from 'react-router-dom';
+import ProgressiveImage from 'react-progressive-image'
+import lozad from 'lozad';
 
 export default function Pet() {
   const [ids, setIds] = useState([]);
@@ -23,6 +25,10 @@ export default function Pet() {
       }
     }
   }, []);
+
+  const videos = document.querySelector('video')
+  const observer = lozad(videos);
+  observer.observe();
 
   return (
     <div>
@@ -39,7 +45,10 @@ export default function Pet() {
           <p className="body-s">Figma / Protopie</p>
           <h2>Connecting adopters with their ideal pets</h2>
         </section>
-        <img src={require("../images/pet/cover_pet.jpg")} alt="overview"></img>
+        <ProgressiveImage src={require("../images/pet/cover_pet.jpg")} placeholder={require('../images/pet/cover_pet_placeholder.jpg')}>
+                        {src => <img className="progressive" src={src} alt="overview" />}
+        </ProgressiveImage>
+       
         <section
           id="pet-overview"
           data-section-name="overview"

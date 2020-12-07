@@ -89,15 +89,22 @@
 }
 
 .black-out{
-    img{
-        display:none;
-    }
-    background: #fff;
-    // filter: brightness(20%);
-    // -webkit-filter: brightness(20%);
+    filter: brightness(20%);
+    -webkit-filter: brightness(20%);
 
 }
 
+
+.progressive{
+    animation: progressiveReveal 0.8s linear;
+    -webkit-animation: progressiveReveal 0.8s linear;
+  }
+  
+  @keyframes progressiveReveal {
+    0% {  opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 
 @media (min-width:$layout-breakpoint-medium) {
     .card-tag{
@@ -158,6 +165,9 @@
             cursor: not-allowed;
         }
         &:hover{
+            img {
+                display: block;
+            }
             width: 50%;
             button{
                 display:none;

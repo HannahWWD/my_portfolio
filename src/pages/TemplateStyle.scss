@@ -246,6 +246,17 @@ p.design-question{
     text-align: center;
 }
 
+
+.progressive{
+    animation: progressiveReveal 0.8s linear;
+    -webkit-animation: progressiveReveal 0.8s linear;
+  }
+  
+  @keyframes progressiveReveal {
+    0% {  opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 @media (max-width:$layout-breakpoint-medium){
 
     section{

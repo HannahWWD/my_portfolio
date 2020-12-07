@@ -54,6 +54,7 @@ function Home() {
                     <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
                         <Card
                             image={require('../images/mockup_pet.jpg')}
+                            placeholderImg = {require('../images/mockup_pet_placeholder.jpg')}
                             title="Fluffy"
                             subtitle="Animal Adoption Website"
                             intro="Connecting adopters with their ideal pets"
@@ -65,6 +66,7 @@ function Home() {
 
                         <Card
                             image={require('../images/n_cover_2.jpg')}
+                            placeholderImg = {require('../images/n_cover_2_placeholder.jpg')}
                             title="Project Galene"
                             subtitle="Microplastic Research App and Sampler"
                             intro="A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research"
@@ -80,6 +82,7 @@ function Home() {
                     <div className={activeTab === 'ux' ? "card-row":"hidden"}>
                     <Card
                             image={require('../images/n_cover_1.jpg')}
+                            placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
                             title="InterArt"
                             subtitle="Interactive Art Community Web App"
                             intro="An interactive multimedia art community for designers and art lovers"
@@ -89,13 +92,11 @@ function Home() {
                             tag={["UX research","UX design","web development"]}
                         />
                         <Card
-                            image={require('../images/n_cover_1.jpg')}
-                            title="InterArt"
-                            subtitle="Interactive Art Community Web App"
-                            intro="An interactive multimedia art community for designers and art lovers"
+                            image={require('../images/n_cover_placeholder.png')}
+                            backgroundColor="three"
                             
                             visibility="placeholder"
-                            tag={["UX research","UX design","web development"]}
+                           
                         />
 
                     </div>
@@ -103,6 +104,7 @@ function Home() {
                     <div className={activeTab === 'all' || activeTab === 'dev' ? "card-row":"hidden"}>
                     <Card
                             image={require('../images/n_cover_1.jpg')}
+                            placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
                             title="InterArt"
                             subtitle="Interactive Art Community Web App"
                             intro="An interactive multimedia art community for designers and art lovers"
@@ -115,6 +117,7 @@ function Home() {
                     
                     <Card
                             image={require('../images/cover3.jpg')}
+                            placeholderImg = {require('../images/cover3_placeholder.jpg')}
                             title="Weather Widget"
                             subtitle="Weather Web App"
                             intro="Know current and future weather in your city at a glance "
