@@ -43,7 +43,7 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body={["I design and code creative things to support meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`,`${String.fromCodePoint("0x1F596")} Proudly built this portfolio in React`]}
+                    body={["I design and code creative things to test meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`,`${String.fromCodePoint("0x1F596")} Proudly built this portfolio with React`]}
                 />
                 <div className="filters">
                     <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
