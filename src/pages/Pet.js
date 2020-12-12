@@ -11,6 +11,7 @@ import Solution from "../components/Solution";
 import {Link} from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image'
 import lozad from 'lozad';
+import IssueCause from "../components/IssueCause";
 
 export default function Pet() {
   const [ids, setIds] = useState([]);
@@ -79,7 +80,7 @@ export default function Pet() {
             "How could we design an experience that helps adopters connect with
             their ideal pets?"
           </p>
-          <p>Here is a quick strategy overview for the final solution:</p><br/>
+          <p>I used the word "connect" in this place instead of "match" because this experience is not limited to find the right pet. It also includes the process of making a decision to adopt the pet or not, and the process of adopting the pet (namely, really bringing the pet home ). <br/><br/>Here is a quick strategy overview for the final solution:</p><br/>
           <img
             src={require("../images/pet/solutions_overview.png")}
             alt="process"
@@ -103,15 +104,16 @@ export default function Pet() {
           <h4>Research Questions</h4>
 
           <p>
-            The main question I asked in the research phrase was:
+            Two main questions I asked in the research phase was:
             <br />
-           
-            <b>"How did experienced adopters connect with their ideal pets?"</b>
+           <b>"How did experienced adopters connect with their ideal pets?"</b>
+           <br/>
+            <b>"What problems did they encounter? "</b>
             <br/>
             <br />
-            This question could be further broken down as follows:
+            {/* This question could be further broken down as follows: */}
           </p>
-          <ol style={{ paddingLeft: "1em" }}>
+          {/* <ol style={{ paddingLeft: "1em" }}>
             <li>
             How do experienced adopters find available pets? 
             </li>
@@ -121,7 +123,7 @@ export default function Pet() {
             <li>
             What problems do they have during the adoption?
             </li>
-          </ol>
+          </ol> */}
           <h4>Research Methods</h4>
           <img
             src={require("../images/pet/reserach-method.png")}
@@ -131,7 +133,7 @@ export default function Pet() {
           <h4>Synthesize</h4>
           <p>
             To make sense of the inputs coming from the researches, I used the
-            affinity diagram to group useful information and started identifying
+            affinity diagram to organize useful information and started identifying
             design opportunities:{" "}
             <a
               href="https://miro.com/app/board/o9J_ldHJpfE=/"
@@ -142,19 +144,10 @@ export default function Pet() {
             </a>
           </p>
 
-          <Zoom>
-            <img
-              src={require("../images/pet/affinity_dia.jpg")}
-              alt="affinity diagram"
-              className="zoom-image"
-            ></img>
-          </Zoom>
-
+          <br/>
           <p>
-            With the insight generated from the affinity diagram, I made a user
-            journey map to further identify pain points during four adoption
-            phrases: before searching for pets, online searching for pets,
-            decision making, and the final adoption process.
+            With the initial insight generated from the affinity diagram, I created a user
+            journey map to understand the different phases in the adoption process, and mapped pain points to corresponding phases.
           </p>
           <Zoom>
             <img
@@ -163,7 +156,21 @@ export default function Pet() {
               className="zoom-image"
             ></img>
           </Zoom>
+          <br/><br/>
+          <p>I analyzed those pinpoints indicated in the user journey, and identified 5 key problems that repeatedly mentioned by different adopters and survey participants. Before jumping to the solution, I took a step back and investigated the root causes of these issues.
+I put the problems in the pink stickers and listed causes in yellow stickers.
+ </p>
+ <Zoom>
+            <img
+              src={require("../images/pet/obstacles-mapping.jpg")}
+              alt="user journey"
+              className="zoom-image"
+            ></img>
+          </Zoom>
+          
+
           <h3>Research Takeaways</h3>
+          <p>The investigation was very insightful. Next, I grouped causes mentioned in the last session based on the adoption phases - pet matching, decision making, adoption.</p><br/>
           <Zoom>
             <img
               src={require("../images/pet/research-insights.jpg")}
@@ -175,12 +182,14 @@ export default function Pet() {
 
         <section id="pet-ideate" data-section-name="ideate">
           <h3>Ideate</h3>
+          <p> After the research was done, The design goal became clear:</p><br/>
           <p>
             <b>
-              "How do we help adopters find the right pet easier and also smooth
-              the adoption process?"
+              "Help adopters find the right pet easier, facilitate decisions, and smooth the adoption process."
             </b>
           </p>
+          <br/>
+          <p>This goal could be achieved by the following strategies:</p>
           <Zoom>
             <img
               src={require("../images/pet/ideation.png")}
@@ -192,8 +201,7 @@ export default function Pet() {
         <section id="pet-design" data-section-name="design">
           <h3>Design</h3>
           <p>
-            As the design requirements have been identified, it’s time to start
-            doing some design work. I put together a user flow diagram as the
+            As the design requirements have been identified, it’s time for the design work. I put together a high-level user flow diagram as the
             guideline for design.
           </p>
           <h4>Task Flow</h4>
@@ -212,14 +220,16 @@ export default function Pet() {
               className="zoom-image"
             ></img>
           </Zoom>
+          <p>I struggled with a few things while creating the wireframes. Here are some challenges I encountered, and how I solved them at last.</p>
 
           <div className="challenge">
+            
             <p>
               <b>Problem 1: Should I ask for comprehensive preferences about the exact age range, temperament, health condition in the questionnaire?</b>
             </p>
             <br />
             <p>
-                The first thing I struggled with was how constrained the questionnaire for pet matching should be. The difference between how constrained the question will lead to two different flows to generate recommendations.
+                The first thing I struggled with was how constrained the assessment for pet matching should be. The difference between how constrained the question led to two different flows to generate recommendations.
             </p>
 
             <Zoom>
@@ -230,25 +240,47 @@ export default function Pet() {
               ></img>
             </Zoom>
             <p>
-            After consulting with a previous adopter, I found that adopters usually didn’t know the exact characteristics of pets (e.g. age range) they wanted at the beginning. So I decided to embrace the loosely-matching plan.
+            After consulting with a previous adopter, I found that adopters usually didn’t know about the exact requirements of pets (e.g. age range) they wanted at the beginning. Their expectations emerge and change over time (e.g., after seeing the recommendations). So I decided to embrace the loosely-matching plan.
+            </p>
+          </div>
+
+          <div className="challenge">
+
+          <p>
+              <b>
+                Problem 2: What information should I put into the profile detail page?
+              </b>
+            </p>
+            <br />
+            <p>
+            Adopters expect the pet profiles to effectively communicate the information they care about. From the interview, adopters mentioned that age and temperament were important factors. They also claimed that they were not fond of long, wordy descriptions. 
+            </p>
+            <Zoom>
+              <img
+                src={require("../images/pet/option2.png")}
+                alt="challenge 2"
+                className="zoom-image"
+              ></img>
+            </Zoom>
+            <p>
+            I selected the second option because it did a better job to communicate the selected pet’s advantages and disadvantages. 
             </p>
           </div>
 
           <div className="challenge">
             <p>
               <b>
-                Problem 2: How to expose adopters to the adoption process as
-                early as possible?
+                Problem 3: How to inform adopters of the novel adoption process as early as possible?
               </b>
             </p>
             <br />
             <p>
-            The optimized adoption process is different from the common shelter adoption. Adopters are not familiar with features such as personalized recommendations and online reservations. I need to introduce adopters about these inventions before they start to panic.
+            The optimized adoption process is different from the common shelter adoption. Adopters are not familiar with features such as personalized recommendations and online reservations. I need to introduce adopters to these inventions before they start to panic.
             </p>
             <Zoom>
               <img
-                src={require("../images/pet/option2.png")}
-                alt="challenge 2"
+                src={require("../images/pet/option3.png")}
+                alt="challenge 3"
                 className="zoom-image"
               ></img>
             </Zoom>
@@ -271,7 +303,7 @@ export default function Pet() {
               adopters’ expectations?
             </li>
             <li>Is the comparison feature useful?</li>
-            <li>Is the adoption flow clear?</li>
+            <li>What are some burning questions that need to solve?</li>
           </ol>
 
           <h4>Key issues</h4>
@@ -296,31 +328,8 @@ export default function Pet() {
 
           <div>
             <p className="highlight">
-              <b>Issue 2: The entry for pet comparison is not recognizable</b>
-            </p>
-            <p>
-              The bag icon is confusing. One participant mentioned:"I guess I
-              should click on this icon... but it is too confusing since (the
-              icon) looks like a shopping bag. It should be a heart or something
-              else."
-            </p>
-            <br />
-
-            <Solution explanation="Use a text button labeling with “compare” instead."></Solution>
-
-            <Zoom>
-              <img
-                src={require("../images/pet/change2.png")}
-                alt="change 2"
-                className="zoom-image"
-              ></img>
-            </Zoom>
-          </div>
-
-          <div>
-            <p className="highlight">
               <b>
-                Issue 3: The filter component is hard to find and not
+                Issue 2: The filter component is hard to find and not
                 straightforward to read
               </b>
             </p>
@@ -339,16 +348,41 @@ export default function Pet() {
             <Zoom>
               <img
                 src={require("../images/pet/change3.png")}
+                alt="change 2"
+                className="zoom-image"
+              ></img>
+            </Zoom>
+          </div>
+
+          <div>
+            <p className="highlight">
+              <b>Issue 3: The entry for pet comparison is not recognizable</b>
+            </p>
+            <p>
+              The bag icon is confusing. One participant mentioned:"I guess I
+              should click on this icon... but it is too confusing since (the
+              icon) looks like a shopping bag. It should be a heart or something
+              else."
+            </p>
+            <br />
+
+            <Solution explanation="Use a text button labeling with “compare” instead."></Solution>
+
+            <Zoom>
+              <img
+                src={require("../images/pet/change2.png")}
                 alt="change 3"
                 className="zoom-image"
               ></img>
             </Zoom>
           </div>
+
         </section>
 
         <section id="pet-final" data-section-name="final design">
           <h3>Final Design</h3>
           <h4>Iterated User Flow</h4>
+          <p> I will give a high-level introduction to the user flow and then go into detail for a few important features related to the objective most. At the beginning of the adoption process, users would be asked to answer a few questions related to their lifestyles and preferences. A list of pet recommendations will be shown based on their answers. After that, users could pick multiple pets that align with their expectations, and compare these pets using the comparison feature. If they have made a decision, they can reserve the pet online, and if the pet is on hold, they can join the waitlist and wait for further instructions.</p>
           <Zoom>
               <img
                 src={require("../images/pet/taskflow_it.jpg")}
@@ -356,24 +390,20 @@ export default function Pet() {
                 className="zoom-image"
               ></img>
             </Zoom>
+            
           <p>
-            Let’s revisit those pain points discovered in the user research
+            Next, let’s revisit those pain points discovered in the user research
             section, and see how I solved these problems one by one.
           </p>
           <h4>Pet Finding</h4>
-          <ol>
-            <li>Most shelter websites lack the filtering feature to generate personalized results</li>
-            <li>
-            It is very hard to decide which pet to adopt based on the information online
-            </li>
-            <li>Available pet information is very scattered, had to checkout multiple shelter websites to find the ideal pet
-            </li>
-          </ol>
-
+          
           <div className="videos pet-videos">
+          <IssueCause 
+          problems={["It is time-consuming to review all the pets, especially when some of the websites do not even have a filter"]} 
+          causes={["The searching result is not personalized"]} />
             <Solution
               final
-              solution="Show personalized pet recommendations based on questionnaire answer"
+              solution="Show personalized pet recommendations based on assessment answers"
               explanation="A list of personalized recommendations are generated based on the adopter’s answer to a few general questions about their lifestyle, personal condition, etc."
             ></Solution>
 
@@ -384,10 +414,13 @@ export default function Pet() {
           </div>
 
           <div className="videos pet-videos">
+          <IssueCause 
+          problems={["It is difficult to know what the pet really like only based on their online profiles"]} 
+          causes={["The pet profiles do not highlight the information that adopters really care about", "in-person interaction cannot be substituted by viewing profiles online"]} />
           <Solution
               final
               solution="Prioritize information that adopters care most in pet profiles"
-              explanation="Users can find a pet’s appearance, name, gender, age, temperament in the profile preview. Detailed descriptions such as health condition, possible breed, and adoption tips are listed in the detail page. Users can also find pets that are similar to their current pet profile in the “similar pets” section."
+              explanation="Users can find a pet’s appearance, name, gender, age, temperament in the profile preview. The detailed profile page shows a comprehensive analysis of the selected pet's pros and cons, covering its age, temperament, health condition, size, breed, training status, and other highlights on its personality. Users can also find pets that are similar to their current pet profile in the “similar pets” section."
             ></Solution>
             <video autoPlay loop muted playsInline>
               <source src={require("../images/pet/view_details.mov")}></source>
@@ -398,12 +431,12 @@ export default function Pet() {
           <div className="videos pet-videos">
             <Solution
               final
-              solution="Compile results from multiple nearby animal shelters to diversify choices"
-              explanation="The result of available pets is fetching from different shelters at the location that user chose. Users can change the location anytime to explore options in another area."
+              solution="Make an appointment to meet selected pets in person"
+              explanation="Adopters can schedule a time to meet with the selected pet using the appointment feature. "
             ></Solution>
 
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/switchcity1.mov")}></source>
+              <source src={require("../images/pet/appointment.mov")}></source>
               Your browser does not support HTML video.
             </video>
           </div>
@@ -411,16 +444,15 @@ export default function Pet() {
           
 
           <h4>Decision Making</h4>
-          <ol>
-            <li>It is hard to remember all the interested pets</li>
-          </ol>
 
           <div className="videos pet-videos">
+          <IssueCause 
+          problems={["It is hard to remember all the pets reviewed","It is difficult to decide which pet is suitable for adoption"]} 
+          causes={["Lack of memory aid for reviewed pets", "Lack of an efficient tool to facilitate decisions"]} />
             <Solution
               final
               solution="The save and compare feature"
-              explanation="Users can save as many pets as they wished, and compare them
-              later."
+              explanation="Users can save as many pets as they wished and compare them later. On the comparison page, users could add multiple saved pets to the comparison panel. The system will generate a list of pros and cons for each pet based on their pet profiles, and place them side-by-side to help adopters to make decisions"
             ></Solution>
             <video autoPlay loop muted playsInline>
               <source src={require("../images/pet/compare.mov")}></source>
@@ -430,20 +462,18 @@ export default function Pet() {
           </div>
 
           <h4>Adoption</h4>
-          <ol>
-            <li>
-            Pets cannot be reserved online. Ideal pets picked online might have been adopted before an in-person shelter visit
-            </li>
-          </ol>
+         
 
           <div className="videos pet-videos">
-          <Solution
+          <IssueCause 
+          problems={["Ideal pets picked online might be adopted by other adopters very quickly"]} 
+          causes={["Pets cannot be reserved ahead"]} />
+         
+         <Solution
               final
               solution="Online reservation and waitlist"
-              explanation="After making a decision, users can make a reservation online. If
-              the pet has been reserved, they can join the waitlist and wait for
-              further information.(This is a timely privilege: online reservations are allowed in many shelters now due to COVID-19)"
-            ></Solution>
+              explanation='Depending on the availability of the selected pet, users could find either the "reserve" or "join waitlist" button on the profile page. If the pet is ready to be reserved, users will be directed to the reservation page. They will be asked for a few more questions to prove their eligibility for adoption and provided necessary documentation for the shelter to review. (Online reservation is a timely privilege: online reservations are allowed in many shelters now due to COVID-19)' />
+
             <video autoPlay loop muted playsInline>
               <source src={require("../images/pet/reserve.mov")}></source>
               Your browser does not support HTML video.
