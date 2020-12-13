@@ -27,8 +27,8 @@ export default function Pet() {
     }
   }, []);
 
-  const videos = document.querySelector('video')
-  const observer = lozad(videos);
+  const media = document.querySelectorAll('video,img')
+  const observer = lozad(media);
   observer.observe();
 
   return (
