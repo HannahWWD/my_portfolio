@@ -19,6 +19,7 @@ export default function Pet() {
 
   useEffect(() => {
     const allSection = document.querySelectorAll("section");
+    document.querySelectorAll('img').forEach((img)=>img.setAttribute('loading','lazy'))
     for (let section of allSection) {
       if (section.id) {
         setIds((prev) => [...prev, section.id]);
@@ -28,8 +29,12 @@ export default function Pet() {
   }, []);
 
   const media = document.querySelectorAll('video,img')
+  console.log(media)
   const observer = lozad(media);
   observer.observe();
+
+ 
+
 
   return (
     <div>

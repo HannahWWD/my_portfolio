@@ -17,7 +17,6 @@ import Pet from './pages/Pet';
 
 function App() {
 
-
   return (
     <div className="App">
 
