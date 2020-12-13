@@ -19,18 +19,29 @@ export default function Pet() {
 
   useEffect(() => {
     const allSection = document.querySelectorAll("section");
-    document.querySelectorAll('img').forEach((img)=>img.setAttribute('loading','lazy'))
+    //document.querySelectorAll('img').forEach((img)=>img.setAttribute('loading','lazy'))
+    document.querySelectorAll('img,video').forEach(item=>item.classList.add('lozad'))
+
     for (let section of allSection) {
       if (section.id) {
         setIds((prev) => [...prev, section.id]);
         setSectionNames((prev) => [...prev, section.dataset.sectionName]);
       }
     }
-    const media = document.querySelectorAll('video')
-    console.log('load!')
-    const observer = lozad(media);
-    observer.observe();
+
+  // const media = document.querySelectorAll('video')
+  const observer = lozad();
+  observer.observe();
+  
+  
   }, []);
+
+  // const handleLoaded = (event) =>{
+  //   const img = event.target;
+  //   const src = img.dataset.src;
+  //   img.setAttribute('src',src)
+  
+  // }
 
 
 
@@ -53,8 +64,10 @@ export default function Pet() {
           <h2>Connecting adopters with their ideal pets</h2>
         </section>
         <ProgressiveImage src={require("../images/pet/cover_pet.jpg")} placeholder={require('../images/pet/cover_pet_placeholder.jpg')}>
-                        {src => <img className="progressive" src={src} alt="overview" />}
+                        {(src,loading) => <img style={{ filter: loading ? "blur(10px)" : "none" }} id="first" src={src} alt="overview" />}
         </ProgressiveImage>
+
+        {/* <img data-src={require("../images/pet/cover_pet.jpg")} data-placeholder-background="red" alt="overview"></img> */}
        
         <section
           id="pet-overview"
@@ -88,7 +101,7 @@ export default function Pet() {
           </p>
           <p>I used the word "connect" in this place instead of "match" because this experience is not limited to find the right pet. It also includes the process of making a decision to adopt the pet or not, and the process of adopting the pet (namely, really bringing the pet home ). <br/><br/>Here is a quick strategy overview for the final solution:</p><br/>
           <img
-            src={require("../images/pet/solutions_overview.png")}
+            data-src={require("../images/pet/solutions_overview.png")}
             alt="process"
             style={{ margin: "6em 0" }}
           ></img>
@@ -100,7 +113,7 @@ export default function Pet() {
         <section id="pet-process" data-section-name="process">
             <h3>process</h3>
             <img
-            src={require("../images/pet/process.png")}
+            data-src={require("../images/pet/process.png")}
             alt="process"
             style={{ marginBottom: "4em" }}
           ></img>
@@ -132,7 +145,7 @@ export default function Pet() {
           </ol> */}
           <h4>Research Methods</h4>
           <img
-            src={require("../images/pet/reserach-method.png")}
+            data-src={require("../images/pet/reserach-method.png")}
             alt="research methods"
           ></img>
 
@@ -155,13 +168,16 @@ export default function Pet() {
             With the initial insight generated from the affinity diagram, I created a user
             journey map to understand the different phases in the adoption process, and mapped pain points to corresponding phases.
           </p>
+          <div className="lozad">
           <Zoom>
             <img
               src={require("../images/pet/user-journey.jpg")}
+              // onLoad = {handleLoaded}
               alt="user journey"
               className="zoom-image"
             ></img>
           </Zoom>
+          </div>
           <br/><br/>
           <p>I analyzed those pinpoints indicated in the user journey, and identified 5 key problems that repeatedly mentioned by different adopters and survey participants. Before jumping to the solution, I took a step back and investigated the root causes of these issues.
 I put the problems in the pink stickers and listed causes in yellow stickers.
@@ -171,6 +187,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
               src={require("../images/pet/obstacles-mapping.jpg")}
               alt="user journey"
               className="zoom-image"
+             
             ></img>
           </Zoom>
           
@@ -198,7 +215,8 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
           <p>This goal could be achieved by the following strategies:</p>
           <Zoom>
             <img
-              src={require("../images/pet/ideation.png")}
+            src={require("../images/pet/ideation.png")}
+             
               alt="ideation"
               className="zoom-image"
             ></img>
@@ -414,7 +432,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             ></Solution>
 
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/personalize.mov")}></source>
+              <source data-src={require("../images/pet/personalize.mov")}></source>
               Your browser does not support HTML video.
             </video>
           </div>
@@ -429,7 +447,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
               explanation="Users can find a pet’s appearance, name, gender, age, temperament in the profile preview. The detailed profile page shows a comprehensive analysis of the selected pet's pros and cons, covering its age, temperament, health condition, size, breed, training status, and other highlights on its personality. Users can also find pets that are similar to their current pet profile in the “similar pets” section."
             ></Solution>
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/view_details.mov")}></source>
+              <source data-src={require("../images/pet/view_details.mov")}></source>
               Your browser does not support HTML video.
             </video>
           </div>
@@ -442,7 +460,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             ></Solution>
 
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/appointment.mov")}></source>
+              <source data-src={require("../images/pet/appointment.mov")}></source>
               Your browser does not support HTML video.
             </video>
           </div>
@@ -461,7 +479,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
               explanation="Users can save as many pets as they wished and compare them later. On the comparison page, users could add multiple saved pets to the comparison panel. The system will generate a list of pros and cons for each pet based on their pet profiles, and place them side-by-side to help adopters to make decisions"
             ></Solution>
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/compare.mov")}></source>
+              <source data-src={require("../images/pet/compare.mov")}></source>
               Your browser does not support HTML video.
             </video>
             
@@ -481,7 +499,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
               explanation='Depending on the availability of the selected pet, users could find either the "reserve" or "join waitlist" button on the profile page. If the pet is ready to be reserved, users will be directed to the reservation page. They will be asked for a few more questions to prove their eligibility for adoption and provided necessary documentation for the shelter to review. (Online reservation is a timely privilege: online reservations are allowed in many shelters now due to COVID-19)' />
 
             <video autoPlay loop muted playsInline>
-              <source src={require("../images/pet/reserve.mov")}></source>
+              <source data-src={require("../images/pet/reserve.mov")}></source>
               Your browser does not support HTML video.
             </video>
           </div>
