@@ -26,12 +26,13 @@ export default function Pet() {
         setSectionNames((prev) => [...prev, section.dataset.sectionName]);
       }
     }
+    const media = document.querySelectorAll('video')
+    console.log('load!')
+    const observer = lozad(media);
+    observer.observe();
   }, []);
 
-  const media = document.querySelectorAll('video,img')
-  console.log(media)
-  const observer = lozad(media);
-  observer.observe();
+
 
  
 
