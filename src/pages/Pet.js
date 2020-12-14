@@ -20,7 +20,7 @@ export default function Pet() {
   useEffect(() => {
     const allSection = document.querySelectorAll("section");
     //document.querySelectorAll('img').forEach((img)=>img.setAttribute('loading','lazy'))
-    document.querySelectorAll('img,video').forEach(item=>item.classList.add('lozad'))
+    //document.querySelectorAll('video').forEach(item=>item.classList.add('lozad'))
 
     for (let section of allSection) {
       if (section.id) {
@@ -29,8 +29,8 @@ export default function Pet() {
       }
     }
 
-  // const media = document.querySelectorAll('video')
-  const observer = lozad();
+  const media = document.querySelectorAll('video,iframe')
+  const observer = lozad(media);
   observer.observe();
   
   
@@ -63,8 +63,10 @@ export default function Pet() {
           <p className="body-s">Figma / Protopie</p>
           <h2>Connecting adopters with their ideal pets</h2>
         </section>
+        
+
         <ProgressiveImage src={require("../images/pet/cover_pet.jpg")} placeholder={require('../images/pet/cover_pet_placeholder.jpg')}>
-                        {(src,loading) => <img style={{ filter: loading ? "blur(10px)" : "none" }} id="first" src={src} alt="overview" />}
+                        {(src,loading) => <img className={loading? "progressive-cover":"progressive-cover-done"} src={src} alt="overview" />}
         </ProgressiveImage>
 
         {/* <img data-src={require("../images/pet/cover_pet.jpg")} data-placeholder-background="red" alt="overview"></img> */}
@@ -101,7 +103,7 @@ export default function Pet() {
           </p>
           <p>I used the word "connect" in this place instead of "match" because this experience is not limited to find the right pet. It also includes the process of making a decision to adopt the pet or not, and the process of adopting the pet (namely, really bringing the pet home ). <br/><br/>Here is a quick strategy overview for the final solution:</p><br/>
           <img
-            data-src={require("../images/pet/solutions_overview.png")}
+            src={require("../images/pet/solutions_overview.png")}
             alt="process"
             style={{ margin: "6em 0" }}
           ></img>
@@ -113,7 +115,7 @@ export default function Pet() {
         <section id="pet-process" data-section-name="process">
             <h3>process</h3>
             <img
-            data-src={require("../images/pet/process.png")}
+            src={require("../images/pet/process.png")}
             alt="process"
             style={{ marginBottom: "4em" }}
           ></img>
@@ -145,7 +147,7 @@ export default function Pet() {
           </ol> */}
           <h4>Research Methods</h4>
           <img
-            data-src={require("../images/pet/reserach-method.png")}
+            src={require("../images/pet/reserach-method.png")}
             alt="research methods"
           ></img>
 

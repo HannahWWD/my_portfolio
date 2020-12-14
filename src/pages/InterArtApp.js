@@ -54,7 +54,7 @@ function InterArtApp() {
                 </section>
 
                 <ProgressiveImage src={require('../images/interart-1.jpg')} placeholder={require('../images/interart-1-placeholder.jpg')}>
-                        {src => <img className="progressive" src={src} alt="desktop and mobile view" />}
+                        {(src,loading) => <img className={loading? "progressive-cover":"progressive-cover-done"} src={src} alt="overview" />}
                 </ProgressiveImage>
 
                 

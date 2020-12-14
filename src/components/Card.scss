@@ -96,9 +96,9 @@
 
 
 .progressive{
-    animation: progressiveReveal 0.8s linear;
-    -webkit-animation: progressiveReveal 0.8s linear;
-  }
+    animation: progressiveReveal 2s linear;
+    -webkit-animation: progressiveReveal 2s linear;
+}
   
   @keyframes progressiveReveal {
     0% {  opacity: 0; }

@@ -247,14 +247,22 @@ p.design-question{
 }
 
 
-.progressive{
-    animation: progressiveReveal 3s linear;
-    -webkit-animation: progressiveReveal 3s linear;
+.progressive-cover{
+    clip-path: inset(0);
+    -webkit-clip-path:inset(0);
+    filter:blur(30px);
+    -webkit-filter:blur(30px);
 }
   
-  @keyframes progressiveReveal {
-    0% {  opacity: 0; }
-    100% { opacity: 1; }
+.progressive-cover-done{
+    clip-path: inset(0);
+    -webkit-clip-path:inset(0);
+    animation: progressiveReveal2 1s linear;
+    -webkit-animation: progressiveReveal2 1s linear;
+}
+  @keyframes progressiveReveal2 {
+    0% { filter:blur(30px); -webkit-filter:blur(30px); }
+    100% { filter:blur(0px) ; -webkit-filter:blur(0px) ; }
   }
 
 @media (max-width:$layout-breakpoint-medium){

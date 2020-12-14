@@ -11,6 +11,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Solution from '../components/Solution';
 import ProgressiveImage from 'react-progressive-image'
+import lozad from 'lozad';
 
 export default function Galene() {
     const [ids, setIds] = useState([])
@@ -24,6 +25,9 @@ export default function Galene() {
                 setSectionNames(prev=>[...prev,section.dataset.sectionName])
             }
         }
+        const media = document.querySelectorAll('video,iframe')
+        const observer = lozad(media);
+        observer.observe();
         
     }, [])
 
@@ -43,7 +47,7 @@ export default function Galene() {
                     <h2>A combination of mobile app and hardware kit aims at encouraging scuba divers to contribute to microplastic research</h2>
                 </section>
                 <ProgressiveImage src={require('../images/galene/Outcome-Overview.jpg')} placeholder={require('../images/galene/Outcome-Overview-placeholder.jpg')}>
-                        {src => <img className="progressive" src={src} alt="overview" />}
+                        {(src,loading) => <img className={loading? "progressive-cover":"progressive-cover-done"} src={src} alt="overview" />}
                 </ProgressiveImage>
                 <section id="galene-overview" data-section-name="Overview">
                 <h3>Overview</h3>
