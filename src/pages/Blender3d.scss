@@ -1,0 +1,6 @@
+.gallery-row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:6em 0;
+   
+}

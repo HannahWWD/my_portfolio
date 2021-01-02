@@ -55,7 +55,7 @@ export default function Pet() {
         title="Fluffy"
         subtitle="Animal Adoption Website"
         role="Role: UX Designer / Duration: 5 days / Personal Project"
-        figma="TODO"
+        figma="https://www.figma.com/proto/1NB4T561nfhOYVEWVhrito/pet-adoption?node-id=1%3A2&scaling=min-zoom"
       />
 
       <article className="main-content work-content">

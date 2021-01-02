@@ -13,6 +13,7 @@ import Galene from './pages/Galene';
 import {Link} from 'react-router-dom';
 import Weather from './pages/Weather';
 import Pet from './pages/Pet';
+import Blender3d from './pages/Blender3d';
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
         <Route path="/galene"  component={Galene}/> 
         <Route path="/weather-widget"  component={Weather}/> 
         <Route path="/pet"  component={Pet}/> 
+        <Route path="/blender3d"  component={Blender3d}/>
+        
         
       
         <Footer />

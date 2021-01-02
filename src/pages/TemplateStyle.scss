@@ -274,7 +274,8 @@ p.design-question{
         h4{
             font-size: 25px;
         }
-        margin:0 5%;
+        max-width: unset;
+        margin:0 10%;
     }
     p.design-question{
         padding:1em;
@@ -290,6 +291,9 @@ p.design-question{
     }
     .three-cols{
         grid-template-columns: 1fr;
+    }
+    section{
+        margin:0 5%;
     }
 
 }

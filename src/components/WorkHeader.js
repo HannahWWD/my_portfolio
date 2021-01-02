@@ -13,6 +13,13 @@ function WorkHeader(props) {
     //     setShowMessage(shouldShowMessage)
     // }
 
+    let linkConditions = null;
+    if(props.figma){
+        linkConditions = "figma";
+    }else if(props.demo && props.github){
+        linkConditions = "github"
+    }
+
     return (
 
         <div className="work-header-container">
@@ -23,14 +30,13 @@ function WorkHeader(props) {
                 <p>{props.role}</p>
 
 
-                {props.figma ? 
-                <div>
+                <div className={linkConditions === "figma"? null:"hidden"}>
                     <a href={props.figma} rel="noopener noreferrer" target="_blank"><LiveTvIcon />Figma Demo</a>
-                </div> : 
-                <div>
+                </div>
+                <div className={linkConditions === "github"? null:"hidden"}>
                     <a href={props.demo} rel="noopener noreferrer" target="_blank"><LiveTvIcon />Live App</a>
                     <a href={props.github} rel="noopener noreferrer" target="_blank"><GitHubIcon />GitHub</a>
-                </div>}
+                </div>
             </div>
 
         </div>

@@ -43,11 +43,11 @@ function Home() {
                 <Header
                     title="Hannah"
                     subtitle="Wu"
-                    body={["I design and code creative things to test meaningful ideas.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover`,`${String.fromCodePoint("0x1F596")} Proudly built this portfolio with React`]}
+                    body={["I design and code things that transform interesting ideas into reality.",`${String.fromCodePoint("0x1F646")} UX Engineer @UW HCDE`,`${String.fromCodePoint("0x1F4BB")} Prototyping Lover (2D/3D/code)`,`${String.fromCodePoint("0x1F596")} Proudly built this portfolio with React`]}
                 />
                 <div className="filters">
                     <button onClick={()=>{setActiveTab('all')}} className={activeTab === 'all' ? 'active':null}>All</button>
-                    <button onClick={()=>{setActiveTab('ux')}} className={activeTab === 'ux' ? 'active':null}>UX Design</button>
+                    <button onClick={()=>{setActiveTab('ux')}} className={activeTab === 'ux' ? 'active':null}>Design</button>
                     <button onClick={()=>{setActiveTab('dev')}} className={activeTab === 'dev'? 'active':null}>Development</button>
                     </div>
                 <div className="project-container">
@@ -65,6 +65,20 @@ function Home() {
                             />
 
                         <Card
+                            image={require('../images/phone-cover.jpg')}
+                            placeholderImg = {require('../images/phone-cover-placeholder.jpg')}
+                            title="Project 3D"
+                            subtitle="3D Illustrations"
+                            intro="3D illustrations built from scratch with Blender"
+                            backgroundColor="five"
+                            link="/blender3d"
+                            // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
+                            tag={["UX design"]}
+                            />      
+                    </div>
+
+                <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
+                        <Card
                             image={require('../images/n_cover_2.jpg')}
                             placeholderImg = {require('../images/n_cover_2_placeholder.jpg')}
                             title="Project Galene"
@@ -74,13 +88,8 @@ function Home() {
                             link="/galene"
                             // visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                             tag={["UX research","UX design"]}
-                        />                        
-                    </div>
-
-                    {/* don't know how to have the animation as well as have a single item in a row */}
-
-                    <div className={activeTab === 'ux' ? "card-row":"hidden"}>
-                    <Card
+                        />    
+                        <Card
                             image={require('../images/n_cover_1.jpg')}
                             placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
                             title="InterArt"
@@ -91,6 +100,25 @@ function Home() {
                             //visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
                             tag={["UX research","UX design","web development"]}
                         />
+                    </div>
+                
+
+                    {/* don't know how to have the animation as well as have a single item in a row */}
+
+                    <div className={activeTab === 'all' ? "card-row":"hidden"}>
+                  
+                       <Card
+                            image={require('../images/cover3.jpg')}
+                            placeholderImg = {require('../images/cover3_placeholder.jpg')}
+                            title="Weather Widget"
+                            subtitle="Weather Web App"
+                            intro="Know current and future weather in your city at a glance "
+                            backgroundColor="three"
+                            link="/weather-widget"
+                            //visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
+                            tag={["web development","UI design"]}
+                        />
+
                         <Card
                             image={require('../images/n_cover_placeholder.png')}
                             backgroundColor="three"
@@ -101,7 +129,7 @@ function Home() {
 
                     </div>
 
-                    <div className={activeTab === 'all' || activeTab === 'dev' ? "card-row":"hidden"}>
+                    <div className={ activeTab === 'dev' ? "card-row":"hidden"}>
                     <Card
                             image={require('../images/n_cover_1.jpg')}
                             placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
@@ -114,7 +142,6 @@ function Home() {
                             tag={["UX research","UX design","web development"]}
                         />
                          
-                    
                     <Card
                             image={require('../images/cover3.jpg')}
                             placeholderImg = {require('../images/cover3_placeholder.jpg')}
