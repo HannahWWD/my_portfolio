@@ -59,7 +59,15 @@ export default function Blender3d() {
             ></img>
           </Zoom>
 
+          
           <Zoom>
+            <img
+              src={require("../images/blender3d/tree.jpg")}
+              alt="2021 tree"
+              width="100%"
+            ></img>
+        </Zoom>
+        <Zoom>
             <img
               src={require("../images/blender3d/tv-composition-xl.jpg")}
               alt="3d tv with QR code"
@@ -75,11 +83,6 @@ export default function Blender3d() {
           </Zoom>
 
          
-            <img
-              src={require("../images/n_cover_placeholder.png")}
-              alt="more projects"
-              width="100%"
-            ></img>
           
         </div>
         </section>
