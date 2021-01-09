@@ -8,7 +8,7 @@ function Header(props){
                 <h1>{props.title}</h1>
                 <span>{props.subtitle}</span>
             </div>
-            {props.body.map((line)=><p key={line}>{line}</p>)}
+            {props.body && props.body.map((line)=><p key={line}>{line}</p>)}
         </header>
 
     )
