@@ -12,6 +12,9 @@ import {Link} from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image'
 import lozad from 'lozad';
 import IssueCause from "../components/IssueCause";
+import DonutLargeIcon from "@material-ui/icons/DonutLarge";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LiveTvIcon from "@material-ui/icons/LiveTv";
 
 export default function Pet() {
   const [ids, setIds] = useState([]);
@@ -519,8 +522,60 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
 
         <section id="pet-development" data-section-name="coding it up">
             <h3>Coding it up</h3>
-            <p>This website is currently under development. A demo is expected to be released on early January.</p>
-            <p>If you are looking for projects that have been developed, checkout <Link to="/interart">InterArt</Link> and <Link to="/weather-widget">Weather Widget</Link>.</p>
+            <p>The pet matching assessment is now live.</p>
+
+            <br />
+          <p>Technologies:</p>
+          <br />
+          <div className="customized-list">
+            <div>
+              <DonutLargeIcon fontSize="large" />
+              React
+            </div>
+            <div>
+              <DonutLargeIcon fontSize="large" />
+              REST Api
+            </div>
+            <div>
+              <DonutLargeIcon fontSize="large" />
+              SCSS
+            </div>
+          </div>
+          <br />
+          <p>Features:</p>
+          <div className="customized-list">
+            <div>
+              <DonutLargeIcon fontSize="large" />
+              Recommend matched pets based on the answers of the assessment
+            </div>
+          </div>
+
+          <br />
+          <h4>Live Demo</h4>
+          <p>Checkout the live web app demo and github repository:</p>
+          <div className="live-demo-container">
+            <a
+              href="https://fluffy-pet-adoption.netlify.app/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="live-demo-btn"
+            >
+              <LiveTvIcon />
+              Live App
+            </a>
+
+            <a
+              href="https://github.com/HannahWWD/pet-mockup"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="live-demo-btn btn-contour"
+            >
+              <GitHubIcon />
+              GitHub
+            </a>
+          </div>
+          <br />
+            <p>If you are looking for more projects that have been developed, checkout <Link to="/interart">InterArt</Link> and <Link to="/weather-widget">Weather Widget</Link>.</p>
         </section>
 
         <section id="pet-reflection" data-section-name="reflection">

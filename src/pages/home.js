@@ -63,22 +63,7 @@ function Home() {
                             // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
                             tag={["UX research","UX design","web development"]}
                             />
-
-                        <Card
-                            image={require('../images/phone-cover.jpg')}
-                            placeholderImg = {require('../images/phone-cover-placeholder.jpg')}
-                            title="Project 3D"
-                            subtitle="3D Illustrations"
-                            intro="3D illustrations built from scratch with Blender"
-                            backgroundColor="five"
-                            link="/blender3d"
-                            // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
-                            tag={["UX design"]}
-                            />      
-                    </div>
-
-                <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
-                        <Card
+                     <Card
                             image={require('../images/n_cover_2.jpg')}
                             placeholderImg = {require('../images/n_cover_2_placeholder.jpg')}
                             title="Project Galene"
@@ -89,6 +74,22 @@ function Home() {
                             // visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                             tag={["UX research","UX design"]}
                         />    
+                        
+                    </div>
+
+                <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
+                             <Card
+                            image={require('../images/phone-cover.jpg')}
+                            placeholderImg = {require('../images/phone-cover-placeholder.jpg')}
+                            title="Project 3D"
+                            subtitle="3D Illustrations"
+                            intro="3D illustrations built from scratch with Blender"
+                            backgroundColor="five"
+                            link="/blender3d"
+                            // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
+                            tag={["UX design"]}
+                            />     
+                       
                         <Card
                             image={require('../images/n_cover_1.jpg')}
                             placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
@@ -119,6 +120,7 @@ function Home() {
                             tag={["web development","UI design"]}
                         />
 
+                        {/* placeholder card */}
                         <Card
                             image={require('../images/n_cover_placeholder.png')}
                             backgroundColor="three"
@@ -131,6 +133,18 @@ function Home() {
 
                     <div className={ activeTab === 'dev' ? "card-row":"hidden"}>
                     <Card
+                            image={require('../images/mockup_pet.jpg')}
+                            placeholderImg = {require('../images/mockup_pet_placeholder.jpg')}
+                            title="Fluffy"
+                            subtitle="Animal Adoption Website"
+                            intro="Connecting adopters with their ideal pets"
+                            backgroundColor="two"
+                            link="/Pet"
+                            // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
+                            tag={["UX research","UX design","web development"]}
+                            />
+
+                    <Card
                             image={require('../images/n_cover_1.jpg')}
                             placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
                             title="InterArt"
@@ -141,6 +155,11 @@ function Home() {
                             //visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
                             tag={["UX research","UX design","web development"]}
                         />
+                        
+                        </div>
+
+                    <div className={ activeTab === 'dev' ? "card-row":"hidden"}>
+                  
                          
                     <Card
                             image={require('../images/cover3.jpg')}
@@ -152,6 +171,14 @@ function Home() {
                             link="/weather-widget"
                             //visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                             tag={["web development","UI design"]}
+                        />
+                         {/* placeholder card */}
+                         <Card
+                            image={require('../images/n_cover_placeholder.png')}
+                            backgroundColor="three"
+                            
+                            visibility="placeholder"
+                           
                         />
                     {/* <Card
                             image={require('../images/card1.gif')}
