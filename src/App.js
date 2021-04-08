@@ -14,6 +14,7 @@ import {Link} from 'react-router-dom';
 import Weather from './pages/Weather';
 import Pet from './pages/Pet';
 import Blender3d from './pages/Blender3d';
+import Seller from './pages/Seller';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/weather-widget"  component={Weather}/> 
         <Route path="/pet"  component={Pet}/> 
         <Route path="/blender3d"  component={Blender3d}/>
+        <Route path="/p2p-seller"  component={Seller}/>
         
         
       

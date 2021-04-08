@@ -83,7 +83,7 @@ export default function Pet() {
           
           <p>
             This project started with a given design prompt from one of my
-            classes (modified from a google interview question):
+            courses:
             <br />
             <br />
             “Millions of animals are currently in shelters and foster homes
@@ -184,7 +184,7 @@ export default function Pet() {
           </Zoom>
           </div>
           <br/><br/>
-          <p>I analyzed those pinpoints indicated in the user journey, and identified 5 key problems that repeatedly mentioned by different adopters and survey participants. Before jumping to the solution, I took a step back and investigated the root causes of these issues.
+          <p>I analyzed those pain points indicated in the user journey, and identified 5 key problems that repeatedly mentioned by different adopters and survey participants. Before jumping to the solution, I took a step back and investigated the root causes of these issues.
 I put the problems in the pink stickers and listed causes in yellow stickers.
  </p>
  <Zoom>

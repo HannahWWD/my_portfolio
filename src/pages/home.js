@@ -63,7 +63,24 @@ function Home() {
                             // visibility={activeTab === 'all' || activeTab === 'ux' ? true:false}
                             tag={["UX research","UX design","web development"]}
                             />
-                     <Card
+
+                            <Card
+                            image={require('../images/cover-seller-lg.jpg')}
+                            placeholderImg = {require('../images/cover-seller-placeholder.jpg')}
+                            title="PeerMarket"
+                            subtitle="Web Application for P2P Selling"
+                            intro="Help P2P sellers better manage their business"
+                            backgroundColor="six"
+                            link="/p2p-seller"
+                            tag={["UX research","UX design"]}
+                            />
+
+                  
+                        
+                    </div>
+
+                <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
+                <Card
                             image={require('../images/n_cover_2.jpg')}
                             placeholderImg = {require('../images/n_cover_2_placeholder.jpg')}
                             title="Project Galene"
@@ -74,10 +91,6 @@ function Home() {
                             // visibility={activeTab === 'all' || activeTab === 'ux'? true:false}
                             tag={["UX research","UX design"]}
                         />    
-                        
-                    </div>
-
-                <div className={activeTab === 'all' || activeTab === 'ux' ? "card-row":"hidden"}>
                              <Card
                             image={require('../images/phone-cover.jpg')}
                             placeholderImg = {require('../images/phone-cover-placeholder.jpg')}
@@ -90,7 +103,13 @@ function Home() {
                             tag={["UX design"]}
                             />     
                        
-                        <Card
+                    </div>
+                
+
+                    {/* don't know how to have the animation as well as have a single item in a row */}
+
+                    <div className={activeTab === 'all' ? "card-row":"hidden"}>
+                    <Card
                             image={require('../images/n_cover_1.jpg')}
                             placeholderImg = {require('../images/n_cover_1_placeholder.jpg')}
                             title="InterArt"
@@ -101,12 +120,6 @@ function Home() {
                             //visibility={activeTab === 'all' || activeTab === 'ux' || activeTab === 'dev'? true:false}
                             tag={["UX research","UX design","web development"]}
                         />
-                    </div>
-                
-
-                    {/* don't know how to have the animation as well as have a single item in a row */}
-
-                    <div className={activeTab === 'all' ? "card-row":"hidden"}>
                   
                        <Card
                             image={require('../images/cover3.jpg')}
@@ -118,15 +131,6 @@ function Home() {
                             link="/weather-widget"
                             //visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
                             tag={["web development","UI design"]}
-                        />
-
-                        {/* placeholder card */}
-                        <Card
-                            image={require('../images/n_cover_placeholder.png')}
-                            backgroundColor="three"
-                            
-                            visibility="placeholder"
-                           
                         />
 
                     </div>
@@ -180,16 +184,6 @@ function Home() {
                             visibility="placeholder"
                            
                         />
-                    {/* <Card
-                            image={require('../images/card1.gif')}
-                            title="trip snippet"
-                            subtitle="Travel Web App"
-                            intro="A travel app to keep all you need for your future trip"
-                            backgroundColor="two"
-                            tempLink="https://github.com/HannahWWD/travel_app"
-                            visibility={activeTab === 'all' || activeTab === 'dev'? true:false}
-                            tag={["web development","UI design"]}
-                        /> */}
                       
                        
                     </div>
