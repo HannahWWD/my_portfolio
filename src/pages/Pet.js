@@ -57,7 +57,7 @@ export default function Pet() {
       <WorkHeader
         title="Fluffy"
         subtitle="Animal Adoption Website"
-        role="Role: UX Designer / Duration: 5 days / Personal Project"
+        role="Role: UX Designer & UX Engineer / Duration: 2 weeks / Individual School Project"
         figma="https://www.figma.com/proto/1NB4T561nfhOYVEWVhrito/pet-adoption?node-id=1%3A2&scaling=min-zoom"
       />
 
@@ -130,7 +130,7 @@ export default function Pet() {
           <p>
             Two main questions I asked in the research phase was:
             <br />
-           <b>"How did experienced adopters connect with their ideal pets?"</b>
+           <b>"How did adopters connect with their ideal pets currently?"</b>
            <br/>
             <b>"What problems did they encounter? "</b>
             <br/>
@@ -198,12 +198,12 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
           
 
           <h3>Research Takeaways</h3>
-          <p>The investigation was very insightful. Next, I grouped causes mentioned in the last session based on the adoption phases - pet matching, decision making, adoption.</p><br/>
+          <p>Below shows a connection between ultimate goal, user needs, and current pain points.</p><br/>
           <Zoom>
             <img
               src={require("../images/pet/research-insights.jpg")}
               alt="key takeaways in ux research"
-              className="zoom-image"
+              className="zoom-image light-shadow"
             ></img>
           </Zoom>
         </section>
@@ -213,7 +213,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
           <p> After the research was done, The design goal became clear:</p><br/>
           <p>
             <b>
-              "Help adopters find the right pet easier, facilitate decisions, and smooth the adoption process."
+              "Help adopters find candidates easier, facilitate decisions, and smooth the adoption process."
             </b>
           </p>
           <br/>
@@ -223,7 +223,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             src={require("../images/pet/ideation.png")}
              
               alt="ideation"
-              className="zoom-image"
+              className="zoom-image light-shadow"
             ></img>
           </Zoom>
         </section>
@@ -233,10 +233,10 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             As the design requirements have been identified, it’s time for the design work. I put together a high-level user flow diagram as the
             guideline for design.
           </p>
-          <h4>Task Flow</h4>
+          <h4>User Flow</h4>
           <Zoom>
             <img
-              src={require("../images/pet/taskflow.jpg")}
+              src={require("../images/pet/taskflow.jpeg")}
               alt="task flow"
               className="zoom-image"
             ></img>
@@ -414,7 +414,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
           <p> I will give a high-level introduction to the user flow and then go into detail for a few important features related to the objective most. At the beginning of the adoption process, users would be asked to answer a few questions related to their lifestyles and preferences. A list of pet recommendations will be shown based on their answers. After that, users could pick multiple pets that align with their expectations, and compare these pets using the comparison feature. If they have made a decision, they can reserve the pet online, and if the pet is on hold, they can join the waitlist and wait for further instructions.</p>
           <Zoom>
               <img
-                src={require("../images/pet/taskflow_it.jpg")}
+                src={require("../images/pet/taskflow_it.jpeg")}
                 alt="task flow version 2"
                 className="zoom-image"
               ></img>
@@ -424,7 +424,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             Next, let’s revisit those pain points discovered in the user research
             section, and see how I solved these problems one by one.
           </p>
-          <h4>Pet Finding</h4>
+          <h4>Find candidates</h4>
           
           <div className="videos pet-videos">
           <IssueCause 
@@ -472,7 +472,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
 
           
 
-          <h4>Decision Making</h4>
+          <h4>Make a choice</h4>
 
           <div className="videos pet-videos">
           <IssueCause 
@@ -490,7 +490,7 @@ I put the problems in the pink stickers and listed causes in yellow stickers.
             
           </div>
 
-          <h4>Adoption</h4>
+          <h4>Adopt the pet</h4>
          
 
           <div className="videos pet-videos">
